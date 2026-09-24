@@ -360,7 +360,7 @@ document.addEventListener('DOMContentLoaded', () => {
         await navigator.clipboard.writeText(formula);
         const originalText = btn.textContent;
         btn.textContent = 'Tersalin!';
-        showToast(`Persamaan berhasil disalin: ${formula}`);
+        showToast(`Teks berhasil disalin: ${formula}`);
         setTimeout(() => {
           btn.textContent = originalText;
         }, 1800);
@@ -372,7 +372,7 @@ document.addEventListener('DOMContentLoaded', () => {
         textarea.select();
         document.execCommand('copy');
         document.body.removeChild(textarea);
-        showToast(`Persamaan berhasil disalin: ${formula}`);
+        showToast(`Teks berhasil disalin: ${formula}`);
       }
     });
   });
