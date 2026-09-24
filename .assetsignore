@@ -1,0 +1,10 @@
+# Cloudflare Workers / Pages Assets Ignore
+node_modules/
+.git/
+.github/
+*.zip
+package.json
+package-lock.json
+bun.lockb
+scratch/
+*.md
