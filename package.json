@@ -1,0 +1,18 @@
+{
+  "name": "mathematical-journal",
+  "version": "1.0.0",
+  "description": "Mathematical Journal: Eksplorasi Fungsi Komposisi dan Fungsi Invers",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8080",
+    "deploy": "npx wrangler pages deploy . --project-name=remed-math-journal --commit-dirty=true"
+  },
+  "keywords": [
+    "mathematics",
+    "education",
+    "functions",
+    "cloudflare-pages"
+  ],
+  "author": "Tim Edukasi Matematika",
+  "license": "MIT"
+}

@@ -1,0 +1,2098 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mathematical Journal: Eksplorasi Fungsi Komposisi dan Fungsi Invers. Jurnal edukasi matematika komprehensif, interaktif, dan sistematis untuk pemahaman konseptual dan tugas remedial sekolah.">
+  <meta name="author" content="Tim Edukasi Matematika">
+  <title>Mathematical Journal : Eksplorasi Fungsi Komposisi &amp; Fungsi Invers</title>
+
+  <!-- Google Fonts: Cormorant Garamond (Editorial Serif), Inter (Clean Sans), JetBrains Mono (Math/Labels) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- KaTeX for LaTeX Math Rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" crossorigin="anonymous"></script>
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-theme="light">
+
+  <!-- Reading Progress Bar -->
+  <div class="reading-progress-track" aria-hidden="true">
+    <div class="reading-progress-bar" id="readingProgressBar"></div>
+  </div>
+
+  <!-- Academic Top Banner / Running Head -->
+  <div class="journal-running-head">
+    <div class="container head-content">
+      <span>VOL. 01 / EDISI PEMBELAJARAN MATEMATIKA</span>
+      <span class="head-divider">|</span>
+      <span>TOPIK: FUNGSI KOMPOSISI &amp; INVERS</span>
+      <span class="head-divider">|</span>
+      <span>KODE: MAT-REM-2026</span>
+    </div>
+  </div>
+
+  <!-- Primary Navbar -->
+  <header class="site-header" id="siteHeader">
+    <nav class="navbar container" aria-label="Navigasi Utama">
+      <a href="#beranda" class="brand-logo" aria-label="MATH JOURNAL Beranda">
+        <span class="logo-badge">MJ</span>
+        <span class="logo-text">MATH JOURNAL</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#beranda" class="nav-link active">Beranda</a></li>
+        <li><a href="#pendahuluan" class="nav-link">Pendahuluan</a></li>
+        <li><a href="#komposisi" class="nav-link">Fungsi Komposisi</a></li>
+        <li><a href="#invers" class="nav-link">Fungsi Invers</a></li>
+        <li><a href="#praktik-hitung" class="nav-link">Praktik Hitung</a></li>
+        <li><a href="#penerapan" class="nav-link">Penerapan</a></li>
+        <li><a href="#soal-pembahasan" class="nav-link">Contoh Soal</a></li>
+        <li><a href="#latihan-soal" class="nav-link">Latihan Soal</a></li>
+      </ul>
+
+      <!-- Utility Actions -->
+      <div class="nav-actions">
+        <button id="themeToggleBtn" class="btn-icon theme-toggle" title="Ganti Tema Visual" aria-label="Ganti Tema Tampilan">
+          <span class="theme-icon light-icon" aria-hidden="true">&#9788;</span>
+          <span class="theme-icon dark-icon" aria-hidden="true">&#9790;</span>
+        </button>
+
+        <button class="menu-toggle-btn" id="menuToggleBtn" aria-expanded="false" aria-controls="navMenu" aria-label="Buka Menu Navigasi">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="mainContent">
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-section" id="beranda">
+      <div class="container hero-grid">
+        <div class="hero-text-block">
+          <div class="journal-edition-tag">
+            <span class="tag-accent"></span>
+            <span>EDISI AKADEMIK PEMBELAJARAN SISWA</span>
+          </div>
+
+          <h1 class="hero-title">MATHEMATICAL JOURNAL</h1>
+          <p class="hero-subtitle">Eksplorasi Fungsi Komposisi dan Fungsi Invers</p>
+
+          <p class="hero-description">
+            Memahami bagaimana fungsi matematika dapat digabungkan secara berurutan, dibalikkan hubungannya, serta diterapkan dalam memodelkan transformasi di kehidupan nyata. Dirancang terstruktur, analitis, dan mudah dipelajari.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#pendahuluan" class="btn btn-primary" id="btnStartReading">Mulai Membaca</a>
+            <a href="#daftar-isi" class="btn btn-secondary" id="btnExploreContent">Jelajahi Materi</a>
+          </div>
+
+          <!-- Academic Metadata Card -->
+          <div class="hero-meta-strip">
+            <div class="meta-item">
+              <span class="meta-label">SUBJEK</span>
+              <span class="meta-val">MATEMATIKA</span>
+            </div>
+            <div class="meta-separator">/</div>
+            <div class="meta-item">
+              <span class="meta-label">TOPIK</span>
+              <span class="meta-val">FUNGSI ALJABAR</span>
+            </div>
+            <div class="meta-separator">/</div>
+            <div class="meta-item">
+              <span class="meta-label">EDISI</span>
+              <span class="meta-val">01 : REMEDIAL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Academic Geometric Visualization Card -->
+        <div class="hero-visual-block" aria-label="Visualisasi Konsep Fungsi">
+          <div class="academic-chart-card">
+            <div class="chart-card-header">
+              <span class="chart-id">FIG. 1.0 : PEMETAAN DAN INVERSIBILITAS</span>
+              <span class="chart-status">DIAGRAM FORMAL</span>
+            </div>
+            
+            <div class="svg-visual-container">
+              <svg viewBox="0 0 460 320" class="academic-svg" aria-label="Diagram Matematika Fungsi dan Invers">
+                <!-- Subtle Coordinate Grid Background -->
+                <defs>
+                  <pattern id="mathGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+                    <path d="M 20 0 L 0 0 0 20" fill="none" stroke="currentColor" stroke-width="0.5" stroke-opacity="0.12"/>
+                  </pattern>
+                </defs>
+                <rect width="460" height="320" fill="url(#mathGrid)" class="grid-rect" />
+
+                <!-- Symmetry Line y = x (Dashed) -->
+                <line x1="60" y1="260" x2="380" y2="60" stroke="var(--accent-gold)" stroke-width="1.5" stroke-dasharray="5,5" />
+                <text x="385" y="65" font-family="'JetBrains Mono', monospace" font-size="11" fill="var(--accent-gold)">y = x</text>
+
+                <!-- Curve f(x) -->
+                <path d="M 80 240 Q 200 230 360 80" fill="none" stroke="var(--color-primary)" stroke-width="2.5" />
+                <text x="365" y="95" font-family="'Cormorant Garamond', serif" font-weight="700" font-size="16" fill="var(--color-primary)">f(x)</text>
+
+                <!-- Reflected Curve f^-1(x) -->
+                <path d="M 240 80 Q 230 200 80 360" fill="none" stroke="var(--accent-sage)" stroke-width="2" stroke-dasharray="4,3" opacity="0.8" />
+                <path d="M 100 280 Q 220 180 280 40" fill="none" stroke="var(--accent-sage)" stroke-width="2.5" />
+                <text x="285" y="45" font-family="'Cormorant Garamond', serif" font-weight="700" font-size="16" fill="var(--accent-sage)">f ⁻¹(x)</text>
+
+                <!-- Domain to Codomain Mapping Circles -->
+                <g transform="translate(60, 40)">
+                  <circle cx="45" cy="45" r="35" fill="none" stroke="var(--color-primary)" stroke-width="1.2" stroke-opacity="0.6"/>
+                  <text x="45" y="32" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="var(--color-primary)">DOMAIN</text>
+                  <circle cx="45" cy="52" r="3.5" fill="var(--color-primary)"/>
+                  <text x="45" y="66" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="var(--color-primary)">x</text>
+
+                  <!-- Arrow to g(x) -->
+                  <path d="M 90 45 L 140 45" stroke="var(--accent-sage)" stroke-width="1.5" marker-end="url(#arrowhead)"/>
+                  
+                  <circle cx="185" cy="45" r="35" fill="none" stroke="var(--accent-sage)" stroke-width="1.2" stroke-opacity="0.6"/>
+                  <text x="185" y="32" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="var(--accent-sage)">ANTARA</text>
+                  <circle cx="185" cy="52" r="3.5" fill="var(--accent-sage)"/>
+                  <text x="185" y="66" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="var(--accent-sage)">g(x)</text>
+
+                  <!-- Arrow to f(g(x)) -->
+                  <path d="M 230 45 L 280 45" stroke="var(--color-primary)" stroke-width="1.5"/>
+                  
+                  <circle cx="325" cy="45" r="35" fill="none" stroke="var(--color-primary)" stroke-width="1.2" stroke-opacity="0.6"/>
+                  <text x="325" y="32" text-anchor="middle" font-family="'Inter', sans-serif" font-size="10" font-weight="600" fill="var(--color-primary)">KODOMAIN</text>
+                  <circle cx="325" cy="52" r="3.5" fill="var(--color-primary)"/>
+                  <text x="325" y="66" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" fill="var(--color-primary)">f(g(x))</text>
+                </g>
+
+                <text x="30" y="300" font-family="'Inter', sans-serif" font-size="11" fill="var(--text-muted)">
+                  Simetri Refleksi Invers &amp; Alur Komposisi Bertingkat
+                </text>
+              </svg>
+            </div>
+
+            <div class="chart-caption">
+              <span class="caption-marker">&#9670;</span>
+              <span>Intisari Konseptual: Fungsi invers mencerminkan hubungan terhadap garis identitas $y = x$, sedangkan komposisi merangkai pemetaan secara berantai.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TABLE OF CONTENTS ==================== -->
+    <section class="section-container" id="daftar-isi">
+      <div class="container">
+        <div class="section-header-block">
+          <span class="section-category">INDEX MATERI</span>
+          <h2 class="section-title">Daftar Isi Jurnal Pembelajaran</h2>
+          <div class="header-line"></div>
+          <p class="section-lead">Pilih bab untuk langsung berpindah ke pembahasan spesifik yang ingin dipelajari secara mendalam.</p>
+        </div>
+
+        <div class="toc-grid">
+          <a href="#pendahuluan" class="toc-card">
+            <span class="toc-number">01</span>
+            <div class="toc-content">
+              <h3 class="toc-title">Pendahuluan</h3>
+              <p class="toc-desc">Konsep dasar relasi dan fungsi, domain, kodomain, range, serta notasi nilai fungsi aljabar.</p>
+            </div>
+            <span class="toc-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+
+          <a href="#komposisi" class="toc-card">
+            <span class="toc-number">02</span>
+            <div class="toc-content">
+              <h3 class="toc-title">Fungsi Komposisi</h3>
+              <p class="toc-desc">Penggabungan fungsi bertingkat, notasi $(f \circ g)(x)$, sifat non-komutatif, syarat eksistensi, dan visualisasi proses.</p>
+            </div>
+            <span class="toc-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+
+          <a href="#invers" class="toc-card">
+            <span class="toc-number">03</span>
+            <div class="toc-content">
+              <h3 class="toc-title">Fungsi Invers</h3>
+              <p class="toc-desc">Pembalik pemetaan $f^{-1}(x)$, syarat bijektif, 5 langkah aljabar, pembatasan domain fungsi kuadrat, dan verifikasi.</p>
+            </div>
+            <span class="toc-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+
+          <a href="#praktik-hitung" class="toc-card">
+            <span class="toc-number">LAB</span>
+            <div class="toc-content">
+              <h3 class="toc-title">Laboratorium Praktik</h3>
+              <p class="toc-desc">Eksplorasi kalkulasi mandiri: kalkulator komposisi $(f \circ g)$ &amp; $(g \circ f)$, penurunan 5 langkah invers, dan tantangan berhitung interaktif.</p>
+            </div>
+            <span class="toc-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+
+          <a href="#penerapan" class="toc-card">
+            <span class="toc-number">04</span>
+            <div class="toc-content">
+              <h3 class="toc-title">Penerapan Kehidupan Sehari-hari</h3>
+              <p class="toc-desc">Aplikasi nyata: konversi skala suhu, perhitungan diskon bertingkat plus pajak, dan pemrosesan data digital.</p>
+            </div>
+            <span class="toc-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+
+          <a href="#soal-pembahasan" class="toc-card">
+            <span class="toc-number">05</span>
+            <div class="toc-content">
+              <h3 class="toc-title">Contoh Soal dan Pembahasan</h3>
+              <p class="toc-desc">Enam variasi problem analitis mulai dari tingkat dasar hingga penerapan nyata, dikupas sistematis langkah demi langkah.</p>
+            </div>
+            <span class="toc-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+
+          <a href="#latihan-soal" class="toc-card">
+            <span class="toc-number">06</span>
+            <div class="toc-content">
+              <h3 class="toc-title">Latihan Soal Interaktif</h3>
+              <p class="toc-desc">Uji pemahaman mandiri dengan kuis interaktif 5 pertanyaan, umpan balik langsung, pembahasan instan, dan rekap skor.</p>
+            </div>
+            <span class="toc-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+
+          <a href="#kesimpulan" class="toc-card">
+            <span class="toc-number">07</span>
+            <div class="toc-content">
+              <h3 class="toc-title">Kesimpulan &amp; Penutup</h3>
+              <p class="toc-desc">Sintesis konseptual, refleksi filosofis pembelajaran matematika, dan penutup resmi edisi jurnal.</p>
+            </div>
+            <span class="toc-arrow" aria-hidden="true">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BAB 01 : PENDAHULUAN ==================== -->
+    <section class="section-container chapter-section" id="pendahuluan">
+      <div class="container">
+        <div class="chapter-meta">
+          <span class="chapter-badge">MATHEMATICS / CHAPTER 01</span>
+          <span class="chapter-number-display">BAB 01</span>
+        </div>
+        <h2 class="chapter-heading">Pendahuluan : Konsep Dasar Fungsi</h2>
+        <div class="chapter-rule"></div>
+
+        <div class="article-body">
+          <p class="paragraph-lead">
+            Sebelum melangkah lebih jauh ke penggabungan maupun pembalikan fungsi, kita perlu meletakkan pemahaman yang kukuh mengenai definisi fungsi itu sendiri. Dalam matematika modern, fungsi merupakan fondasi utama untuk memodelkan ketergantungan antarvariabel.
+          </p>
+
+          <div class="academic-callout definition-box">
+            <div class="callout-header">
+              <span class="callout-tag">DEFINISI 1.1</span>
+              <span class="callout-title">Pengertian Relasi dan Fungsi</span>
+            </div>
+            <p class="callout-body">
+              <strong>Fungsi</strong> (atau pemetaan) dari himpunan $A$ ke himpunan $B$ adalah suatu relasi khusus yang memasangkan <em>setiap anggota</em> himpunan $A$ dengan <em>tepat satu anggota</em> himpunan $B$. Himpunan $A$ disebut sebagai daerah asal (domain), dan himpunan $B$ disebut sebagai daerah kawan (kodomain).
+            </p>
+          </div>
+
+          <h3 class="sub-heading">Tiga Komponen Pokok Suatu Fungsi</h3>
+          <p>
+            Untuk memahami fungsi secara menyeluruh, kita membedakan tiga himpunan fundamental:
+          </p>
+
+          <div class="triptych-grid">
+            <div class="triptych-card">
+              <div class="card-icon-num">D</div>
+              <h4 class="triptych-title">Domain ($D_f$)</h4>
+              <p class="triptych-desc">
+                Daerah asal, yakni seluruh himpunan nilai masukan ($x$) yang diperbolehkan sehingga rumus fungsi terdefinisi dan menghasilkan nilai riil yang valid.
+              </p>
+            </div>
+
+            <div class="triptych-card">
+              <div class="card-icon-num">K</div>
+              <h4 class="triptych-title">Kodomain ($K_f$)</h4>
+              <p class="triptych-desc">
+                Daerah kawan, yaitu himpunan tujuan yang memuat seluruh kemungkinan nilai keluaran yang dapat dipasangkan dengan anggota domain.
+              </p>
+            </div>
+
+            <div class="triptych-card">
+              <div class="card-icon-num">R</div>
+              <h4 class="triptych-title">Range ($R_f$)</h4>
+              <p class="triptych-desc">
+                Daerah hasil, yaitu himpunan bagian dari kodomain yang beranggotakan nilai-nilai yang benar-benar menjadi pasangan dari anggota domain ($R_f \subseteq K_f$).
+              </p>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">Notasi Fungsi dan Evaluasi Nilai</h3>
+          <p>
+            Jika suatu fungsi dinamakan $f$, hubungan antara masukan $x$ dan keluaran $y$ dituliskan dengan notasi:
+          </p>
+
+          <div class="equation-card">
+            <div class="equation-display">
+              $$f: x \mapsto f(x) \quad \text{atau} \quad y = f(x)$$
+            </div>
+            <div class="equation-actions">
+              <span class="equation-label">(Persamaan 1.1)</span>
+              <button class="btn-copy-eq" data-formula="f: x \mapsto f(x) \text{ atau } y = f(x)" title="Salin rumus LaTeX">Salin LaTeX</button>
+            </div>
+          </div>
+
+          <p>
+            Mari perhatikan contoh sederhana fungsi linear berikut:
+          </p>
+
+          <div class="worked-example-card">
+            <div class="example-header">
+              <span class="example-tag">CONTOH DASAR</span>
+              <span class="example-name">Evaluasi Nilai Masukan Tertentu</span>
+            </div>
+            <div class="example-body">
+              <p>Diberikan fungsi aljabar:</p>
+              <div class="formula-center">
+                $$f(x) = 2x + 3$$
+              </div>
+              <p>Jika nilai masukan adalah $x = 2$, maka kita menyubstitusikan nilai 2 ke dalam setiap variabel $x$:</p>
+              <div class="formula-center">
+                $$f(2) = 2(2) + 3 = 4 + 3 = 7$$
+              </div>
+              <div class="result-highlight">
+                <span class="result-label">Kesimpulan:</span>
+                <span>Untuk masukan domain $x = 2$, fungsi menghasilkan nilai range $y = 7$. Pasangan berurutannya adalah $(2, 7)$.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Tool: Mini Function Tester -->
+          <div class="interactive-tool-card">
+            <div class="tool-header">
+              <div class="tool-title-group">
+                <span class="tool-badge">INTERAKTIF</span>
+                <h4 class="tool-title">Simulator Nilai Masukan: $f(x) = 2x + 3$</h4>
+              </div>
+              <span class="tool-hint">Coba masukkan sembarang bilangan riil</span>
+            </div>
+            <div class="tool-body">
+              <div class="tool-controls">
+                <label for="evalInputX" class="tool-label">Masukkan Nilai Masukan ($x$):</label>
+                <div class="input-action-row">
+                  <input type="number" id="evalInputX" class="form-input" value="2" step="any" aria-label="Nilai x">
+                  <button id="btnEvalFunction" class="btn btn-secondary">Hitung Nilai $f(x)$</button>
+                </div>
+              </div>
+              <div class="tool-output-panel" id="evalOutputPanel">
+                <div class="eval-flow">
+                  <div class="flow-step">
+                    <span class="step-lbl">Masukan ($x$)</span>
+                    <span class="step-val" id="valInputDisplay">2</span>
+                  </div>
+                  <div class="flow-operator">&rarr; [ 2(&hellip;) + 3 ] &rarr;</div>
+                  <div class="flow-step highlight">
+                    <span class="step-lbl">Keluaran ($f(x)$)</span>
+                    <span class="step-val" id="valOutputDisplay">7</span>
+                  </div>
+                </div>
+                <div class="eval-explanation" id="evalExplanationText">
+                  Perhitungan: $f(2) = 2(2) + 3 = 4 + 3 = 7$.
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BAB 02 : FUNGSI KOMPOSISI ==================== -->
+    <section class="section-container chapter-section alt-bg" id="komposisi">
+      <div class="container">
+        <div class="chapter-meta">
+          <span class="chapter-badge">MATHEMATICS / CHAPTER 02</span>
+          <span class="chapter-number-display">BAB 02</span>
+        </div>
+        <h2 class="chapter-heading">Fungsi Komposisi : Penggabungan Dua Pemetaan</h2>
+        <div class="chapter-rule"></div>
+
+        <div class="article-body">
+          <p class="paragraph-lead">
+            Dalam berbagai bidang sains, komputasi, dan ekonomi, suatu proses jarang berdiri sendiri. Sering kali luaran dari suatu tahap pemrosesan langsung menjadi bahan baku bagi tahap berikutnya. Penggabungan sekuensial inilah yang dalam matematika didefinisikan sebagai fungsi komposisi.
+          </p>
+
+          <div class="academic-callout theorem-box">
+            <div class="callout-header">
+              <span class="callout-tag">DEFINISI 2.1</span>
+              <span class="callout-title">Pengertian Komposisi Fungsi</span>
+            </div>
+            <p class="callout-body">
+              Jika diketahui dua fungsi, yaitu $g: A \to B$ dan $f: B \to C$, maka <strong>fungsi komposisi</strong> $(f \circ g)$ adalah pemetaan langsung dari himpunan $A$ ke himpunan $C$ yang ditentukan dengan rumus:
+            </p>
+            <div class="equation-display">
+              $$(f \circ g)(x) = f(g(x))$$
+            </div>
+            <p class="callout-footer-note">
+              <em>Catatan Penting:</em> Notasi $(f \circ g)$ dibaca <em>"f bundaran g"</em> atau <em>"f komposisi g"</em>. Perhatikan bahwa fungsi $g$ dikerjakan terlebih dahulu pada masukan $x$, lalu hasilnya dimasukkan sebagai argumen ke dalam fungsi $f$.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">Diagram Alir Komposisi Fungsi</h3>
+          <p>
+            Alur pengerjaan dapat divisualisasikan sebagai proses ban berjalan (pipeline) dua tahap:
+          </p>
+
+          <!-- Visual Node Diagram -->
+          <div class="process-flow-diagram" aria-label="Diagram Alir Pemrosesan Fungsi Komposisi">
+            <div class="process-node">
+              <span class="node-badge">Masukan Awal</span>
+              <span class="node-value">$x$</span>
+              <span class="node-domain">Anggota Domain $g$</span>
+            </div>
+
+            <div class="process-arrow">
+              <span class="arrow-label">Mesin $g(x)$</span>
+              <svg class="arrow-svg" viewBox="0 0 100 24">
+                <line x1="0" y1="12" x2="85" y2="12" stroke="currentColor" stroke-width="2" />
+                <polygon points="85,6 100,12 85,18" fill="currentColor" />
+              </svg>
+            </div>
+
+            <div class="process-node middle-node">
+              <span class="node-badge">Hasil Antara</span>
+              <span class="node-value">$g(x)$</span>
+              <span class="node-domain">Range $g$ sekaligus Input $f$</span>
+            </div>
+
+            <div class="process-arrow">
+              <span class="arrow-label">Mesin $f(u)$</span>
+              <svg class="arrow-svg" viewBox="0 0 100 24">
+                <line x1="0" y1="12" x2="85" y2="12" stroke="currentColor" stroke-width="2" />
+                <polygon points="85,6 100,12 85,18" fill="currentColor" />
+              </svg>
+            </div>
+
+            <div class="process-node final-node">
+              <span class="node-badge">Keluaran Akhir</span>
+              <span class="node-value">$(f \circ g)(x) = f(g(x))$</span>
+              <span class="node-domain">Anggota Kodomain $f$</span>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">Syarat Eksistensi Komposisi Fungsi</h3>
+          <p>
+            Dua fungsi tidak selalu dapat dikomposisikan secara sembarangan. Agar fungsi komposisi $(f \circ g)(x)$ dapat terdefinisi, daerah hasil dari fungsi pertama $g$ harus memiliki irisan dengan daerah asal fungsi kedua $f$. Secara formal ditulis:
+          </p>
+
+          <div class="equation-card">
+            <div class="equation-display">
+              $$R_g \cap D_f \ne \emptyset$$
+            </div>
+            <div class="equation-actions">
+              <span class="equation-label">(Syarat Komposisi 2.1)</span>
+              <button class="btn-copy-eq" data-formula="R_g \cap D_f \ne \emptyset" title="Salin rumus">Salin LaTeX</button>
+            </div>
+          </div>
+          <p>
+            Jika syarat ini tidak terpenuhi, maka ada nilai $g(x)$ yang tidak dapat diterima oleh fungsi $f$, sehingga komposisi tidak dapat dilakukan untuk seluruh domain $g$.
+          </p>
+
+          <h3 class="sub-heading">Sifat Non-Komutatif Komposisi Fungsi</h3>
+          <p>
+            Salah satu prinsip terpenting dalam aljabar fungsi adalah bahwa <strong>urutan pengerjaan sangat menentukan hasil akhir</strong>. Secara umum:
+          </p>
+
+          <div class="equation-card warning-eq">
+            <div class="equation-display">
+              $$(f \circ g)(x) \ne (g \circ f)(x)$$
+            </div>
+            <div class="equation-actions">
+              <span class="equation-label">(Sifat Non-Komutatif)</span>
+              <button class="btn-copy-eq" data-formula="(f \circ g)(x) \ne (g \circ f)(x)" title="Salin rumus">Salin LaTeX</button>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">Studi Kasus Perhitungan Komparatif</h3>
+          <p>
+            Mari buktikan ketidaksamaan di atas dengan menghitung kedua urutan menggunakan dua fungsi yang sama:
+          </p>
+
+          <div class="comparison-grid">
+            <!-- Box 1: (f o g)(x) -->
+            <div class="comp-box">
+              <div class="comp-header">
+                <span class="comp-tag">URUTAN 1</span>
+                <h4 class="comp-title">Menentukan $(f \circ g)(x)$</h4>
+              </div>
+              <div class="comp-body">
+                <p>Diketahui:</p>
+                <div class="formula-snippet">
+                  $$f(x) = 2x + 3, \quad g(x) = x^2 - 1$$
+                </div>
+                <p>Langkah aljabar:</p>
+                <ol class="step-list">
+                  <li>Tuliskan bentuk dasar komposisi:
+                    $$(f \circ g)(x) = f(g(x))$$
+                  </li>
+                  <li>Ganti variabel masukan $f$ dengan fungsi $g(x)$:
+                    $$= f(x^2 - 1)$$
+                  </li>
+                  <li>Masukkan $(x^2 - 1)$ ke dalam rumus $f(x) = 2(\dots) + 3$:
+                    $$= 2(x^2 - 1) + 3$$
+                  </li>
+                  <li>Jabarkan secara distributif dan sederhanakan:
+                    $$= 2x^2 - 2 + 3 = 2x^2 + 1$$
+                  </li>
+                </ol>
+                <div class="result-box sage-box">
+                  <span class="box-title">Hasil Akhir:</span>
+                  <span class="box-eq">$$(f \circ g)(x) = 2x^2 + 1$$</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Box 2: (g o f)(x) -->
+            <div class="comp-box">
+              <div class="comp-header">
+                <span class="comp-tag">URUTAN 2</span>
+                <h4 class="comp-title">Menentukan $(g \circ f)(x)$</h4>
+              </div>
+              <div class="comp-body">
+                <p>Diketahui:</p>
+                <div class="formula-snippet">
+                  $$f(x) = 2x + 3, \quad g(x) = x^2 - 1$$
+                </div>
+                <p>Langkah aljabar:</p>
+                <ol class="step-list">
+                  <li>Tuliskan bentuk dasar komposisi:
+                    $$(g \circ f)(x) = g(f(x))$$
+                  </li>
+                  <li>Ganti variabel masukan $g$ dengan fungsi $f(x)$:
+                    $$= g(2x + 3)$$
+                  </li>
+                  <li>Masukkan $(2x + 3)$ ke dalam rumus $g(x) = (\dots)^2 - 1$:
+                    $$= (2x + 3)^2 - 1$$
+                  </li>
+                  <li>Kuadratkan suku binomial $(2x+3)^2 = 4x^2 + 12x + 9$:
+                    $$= 4x^2 + 12x + 9 - 1 = 4x^2 + 12x + 8$$
+                  </li>
+                </ol>
+                <div class="result-box navy-box">
+                  <span class="box-title">Hasil Akhir:</span>
+                  <span class="box-eq">$$(g \circ f)(x) = 4x^2 + 12x + 8$$</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="academic-callout analysis-box">
+            <div class="callout-header">
+              <span class="callout-tag">ANALISIS ANALITIK</span>
+              <span class="callout-title">Perbandingan Hasil Akhir</span>
+            </div>
+            <p class="callout-body">
+              Perhatikan bahwa $(f \circ g)(x) = 2x^2 + 1$, sedangkan $(g \circ f)(x) = 4x^2 + 12x + 8$. Bentuk aljabar dari kedua hasil tersebut sangat berbeda jauh. Ini membuktikan secara gamblang bahwa urutan operasi fungsi memegang peranan krusial dan tidak boleh ditukar sembarangan.
+            </p>
+          </div>
+
+          <!-- Interactive Composition Flow Sandbox -->
+          <div class="interactive-tool-card">
+            <div class="tool-header">
+              <div class="tool-title-group">
+                <span class="tool-badge">LAB INTERAKTIF</span>
+                <h4 class="tool-title">Simulator Dinamis: Membandingkan $(f \circ g)(x)$ dan $(g \circ f)(x)$</h4>
+              </div>
+              <span class="tool-hint">Masukkan nilai $x$ untuk melihat perbandingan secara langsung</span>
+            </div>
+            <div class="tool-body">
+              <div class="tool-controls">
+                <label for="compInputX" class="tool-label">Pilih Nilai Masukan $x$:</label>
+                <div class="input-action-row">
+                  <input type="number" id="compInputX" class="form-input" value="3" step="any" aria-label="Nilai x untuk komposisi">
+                  <button id="btnRunComposition" class="btn btn-secondary">Simulasikan Kedua Alur</button>
+                </div>
+              </div>
+
+              <div class="sandbox-results-grid">
+                <!-- Path A -->
+                <div class="sandbox-path-card">
+                  <div class="path-title">ALUR A: $(f \circ g)(x)$</div>
+                  <div class="path-formula-rule">$f(x) = 2x + 3, \quad g(x) = x^2 - 1$</div>
+                  <div class="path-steps" id="pathASteps">
+                    <div class="p-step">Tahap 1: $g(3) = (3)^2 - 1 = 9 - 1 = 8$</div>
+                    <div class="p-step">Tahap 2: $f(8) = 2(8) + 3 = 16 + 3 = 19$</div>
+                    <div class="p-step-final">Hasil: $(f \circ g)(3) = 19$</div>
+                  </div>
+                </div>
+
+                <!-- Path B -->
+                <div class="sandbox-path-card">
+                  <div class="path-title">ALUR B: $(g \circ f)(x)$</div>
+                  <div class="path-formula-rule">$f(x) = 2x + 3, \quad g(x) = x^2 - 1$</div>
+                  <div class="path-steps" id="pathBSteps">
+                    <div class="p-step">Tahap 1: $f(3) = 2(3) + 3 = 6 + 3 = 9$</div>
+                    <div class="p-step">Tahap 2: $g(9) = (9)^2 - 1 = 81 - 1 = 80$</div>
+                    <div class="p-step-final">Hasil: $(g \circ f)(3) = 80$</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="sandbox-verdict" id="compVerdict">
+                Perbandingan: $19 \ne 80$. Hal ini memverifikasi bahwa $(f \circ g)(3) \ne (g \circ f)(3)$.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BAB 03 : FUNGSI INVERS ==================== -->
+    <section class="section-container chapter-section" id="invers">
+      <div class="container">
+        <div class="chapter-meta">
+          <span class="chapter-badge">MATHEMATICS / CHAPTER 03</span>
+          <span class="chapter-number-display">BAB 03</span>
+        </div>
+        <h2 class="chapter-heading">Fungsi Invers : Pembalikan Arah Pemetaan</h2>
+        <div class="chapter-rule"></div>
+
+        <div class="article-body">
+          <p class="paragraph-lead">
+            Jika sebuah fungsi dapat dipandang sebagai mesin yang memproses masukan $x$ menjadi luaran $y$, maka pertanyaan mendasar berikutnya adalah: dapatkah kita mengonstruksi mesin yang bekerja berkebalikan arah, yaitu menerima $y$ lalu mengembalikannya tepat ke masukan asalnya $x$? Mesin pembalik ini dinamakan fungsi invers.
+          </p>
+
+          <div class="academic-callout definition-box">
+            <div class="callout-header">
+              <span class="callout-tag">DEFINISI 3.1</span>
+              <span class="callout-title">Pengertian Fungsi Invers</span>
+            </div>
+            <p class="callout-body">
+              Jika fungsi $f$ memetakan setiap anggota himpunan $A$ ke himpunan $B$, maka <strong>fungsi invers</strong> $f^{-1}$ adalah pemetaan yang membalikkan arah relasi tersebut, yakni memetakan setiap anggota himpunan $B$ kembali ke himpunan $A$.
+            </p>
+            <div class="equation-display">
+              $$f(x) = y \iff f^{-1}(y) = x$$
+            </div>
+          </div>
+
+          <div class="academic-warning-box">
+            <div class="warning-title">&#9888; Peringatan Notasi Kritis</div>
+            <p class="warning-body">
+              Pangkat $-1$ pada notasi $f^{-1}(x)$ <strong>bukanlah eksponen aljabar</strong> dan sama sekali tidak berarti $\frac{1}{f(x)}$. Simbol $-1$ tersebut merupakan lambang operator invers pemetaan. Perhatikan perbedaan mendasar ini:
+            </p>
+            <div class="formula-center">
+              $$f^{-1}(x) \ne \frac{1}{f(x)} = [f(x)]^{-1}$$
+            </div>
+          </div>
+
+          <h3 class="sub-heading">Syarat Keberadaan Fungsi Invers : Fungsi Bijektif</h3>
+          <p>
+            Tidak semua fungsi memiliki fungsi invers. Agar pembalikan arah relasi tetap memenuhi kriteria fungsi (yaitu setiap elemen daerah asal memiliki tepat satu pasangan di daerah kawan), fungsi awal $f$ wajib berkorespondensi satu-satu atau bersifat <strong>bijektif</strong>:
+          </p>
+
+          <div class="dual-features-grid">
+            <div class="feature-item-card">
+              <h4 class="feature-card-title">1. Bersifat Injektif (Satu-Satu)</h4>
+              <p class="feature-card-desc">
+                Setiap anggota domain yang berbeda harus menghasilkan nilai keluaran yang berbeda:
+                $$x_1 \ne x_2 \implies f(x_1) \ne f(x_2)$$
+                Secara visual pada grafik koordinat Cartesius, fungsi injektif lolos <em>Uji Garis Horizontal (Horizontal Line Test)</em>: tidak ada garis horizontal yang memotong kurva di lebih dari satu titik.
+              </p>
+            </div>
+
+            <div class="feature-item-card">
+              <h4 class="feature-card-title">2. Bersifat Surjektif (Pada / Onto)</h4>
+              <p class="feature-card-desc">
+                Setiap anggota daerah kawan (kodomain) harus memiliki sekurang-kurangnya satu prapeta pada daerah asal:
+                $$R_f = K_f$$
+                Tidak ada anggota daerah kawan yang menganggur atau tidak memiliki pasangan.
+              </p>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">Sifat Identitas Fungsi dan Inversnya</h3>
+          <p>
+            Jika suatu fungsi dikomposisikan dengan inversnya, keduanya akan saling membatalkan dan menghasilkan fungsi identitas $I(x) = x$:
+          </p>
+
+          <div class="equation-card">
+            <div class="equation-display">
+              $$(f^{-1} \circ f)(x) = x \quad \text{dan} \quad (f \circ f^{-1})(x) = x$$
+            </div>
+            <div class="equation-actions">
+              <span class="equation-label">(Identitas Invers 3.1)</span>
+              <button class="btn-copy-eq" data-formula="(f^{-1} \circ f)(x) = x \text{ dan } (f \circ f^{-1})(x) = x" title="Salin rumus">Salin LaTeX</button>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">5 Tahapan Sistematis Menentukan Rumus Invers</h3>
+          <p>
+            Untuk mencari rumus aljabar dari fungsi invers $f^{-1}(x)$, kita dapat mengikuti prosedur baku lima langkah berikut:
+          </p>
+
+          <div class="procedure-timeline">
+            <div class="timeline-step">
+              <span class="step-badge-circle">1</span>
+              <div class="timeline-content">
+                <h4 class="step-heading">Tuliskan dalam Bentuk $y = f(x)$</h4>
+                <p>Ubah notasi fungsi awal menjadi persamaan yang menghubungkan peubah bebas $x$ dan peubah terikat $y$.</p>
+              </div>
+            </div>
+
+            <div class="timeline-step">
+              <span class="step-badge-circle">2</span>
+              <div class="timeline-content">
+                <h4 class="step-heading">Tukarkan Posisi Variabel $x$ dan $y$</h4>
+                <p>Gantikan setiap kemunculan $x$ dengan $y$, dan sebaliknya gantikan setiap kemunculan $y$ dengan $x$. Langkah ini secara visual merefleksikan grafik terhadap garis $y = x$.</p>
+              </div>
+            </div>
+
+            <div class="timeline-step">
+              <span class="step-badge-circle">3</span>
+              <div class="timeline-content">
+                <h4 class="step-heading">Selesaikan Persamaan untuk Menyatakan $y$</h4>
+                <p>Gunakan operasi manipulasi aljabar (penjumlahan, perkalian, pemfaktoran, atau akar) untuk mengisolasi variabel $y$ di salah satu ruas persamaan.</p>
+              </div>
+            </div>
+
+            <div class="timeline-step">
+              <span class="step-badge-circle">4</span>
+              <div class="timeline-content">
+                <h4 class="step-heading">Gantikan $y$ dengan Notasi $f^{-1}(x)$</h4>
+                <p>Setelah $y$ terisolasi, gantikan lambang $y$ dengan $f^{-1}(x)$ untuk menyatakan rumus invers akhir.</p>
+              </div>
+            </div>
+
+            <div class="timeline-step">
+              <span class="step-badge-circle">5</span>
+              <div class="timeline-content">
+                <h4 class="step-heading">Lakukan Pemeriksaan (Verifikasi)</h4>
+                <p>Uji kebenaran rumus dengan mengevaluasi komposisi $f(f^{-1}(x))$. Hasilnya harus terbukti sama persis dengan $x$.</p>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">Contoh Pembahasan Terinci : Invers Fungsi Linear</h3>
+
+          <div class="worked-example-card">
+            <div class="example-header">
+              <span class="example-tag">CONTOH 3.1</span>
+              <span class="example-name">Menentukan Invers dari $f(x) = 3x - 6$</span>
+            </div>
+            <div class="example-body">
+              <p><strong>Langkah 1:</strong> Nyatakan fungsi dalam peubah $y$:</p>
+              <div class="formula-center">$$y = 3x - 6$$</div>
+
+              <p><strong>Langkah 2:</strong> Tukarkan posisi variabel $x$ dan $y$:</p>
+              <div class="formula-center">$$x = 3y - 6$$</div>
+
+              <p><strong>Langkah 3:</strong> Selesaikan persamaan untuk $y$:</p>
+              <div class="formula-center">
+                $$x + 6 = 3y \implies 3y = x + 6 \implies y = \frac{x + 6}{3}$$
+              </div>
+
+              <p><strong>Langkah 4:</strong> Gantikan $y$ dengan lambang $f^{-1}(x)$:</p>
+              <div class="formula-center">
+                $$f^{-1}(x) = \frac{x + 6}{3} \quad \text{atau} \quad f^{-1}(x) = \frac{1}{3}x + 2$$
+              </div>
+
+              <p><strong>Langkah 5 (Verifikasi):</strong> Buktikan dengan komposisi $f(f^{-1}(x))$:</p>
+              <div class="formula-center">
+                $$f(f^{-1}(x)) = 3\left(\frac{x + 6}{3}\right) - 6 = (x + 6) - 6 = x$$
+              </div>
+
+              <div class="result-highlight">
+                <span class="result-label">Hasil Terverifikasi:</span>
+                <span>Karena $f(f^{-1}(x)) = x$, maka rumus invers $f^{-1}(x) = \frac{x + 6}{3}$ terbukti benar dan sahih.</span>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">Kasus Khusus: Pembatasan Domain pada Fungsi Kuadrat</h3>
+          <p>
+            Fungsi kuadrat seperti $f(x) = x^2$ dengan domain bilangan riil penuh ($\mathbb{R}$) <strong>tidak memiliki invers</strong> karena bukan merupakan fungsi satu-satu (misalnya $f(-2) = 4$ dan $f(2) = 4$, satu luaran memiliki dua masukan berbeda).
+          </p>
+          <p>
+            Agar fungsi tersebut dapat diinverskan, kita wajib <strong>membatasi domainnya</strong> agar kurva menjadi monoton naik atau monoton turun sehingga lolos uji garis horizontal.
+          </p>
+
+          <div class="academic-callout logic-box">
+            <div class="callout-header">
+              <span class="callout-tag">CONTOH 3.2</span>
+              <span class="callout-title">Invers Fungsi Kuadrat dengan Domain Terbatas</span>
+            </div>
+            <p class="callout-body">
+              Diberikan fungsi kuadrat dengan pembatasan domain non-negatif:
+            </p>
+            <div class="formula-center">
+              $$f(x) = x^2, \quad \text{untuk } x \ge 0$$
+            </div>
+            <p class="callout-body">
+              Mari kita cari rumus inversnya:
+            </p>
+            <ol class="step-list">
+              <li>Tuliskan persamaan: $y = x^2$ dengan $x \ge 0$ dan $y \ge 0$.</li>
+              <li>Tukarkan posisi variabel: $x = y^2$ dengan syarat $y \ge 0$.</li>
+              <li>Tarik akar kuadrat pada kedua ruas:
+                $$y = \pm\sqrt{x}$$
+                Karena disyaratkan $y \ge 0$, kita hanya mengambil cabang nilai positif:
+                $$y = \sqrt{x}$$
+              </li>
+              <li>Ganti dengan notasi invers:
+                $$f^{-1}(x) = \sqrt{x}, \quad \text{untuk } x \ge 0$$
+              </li>
+            </ol>
+            <p class="callout-footer-note">
+              <em>Kesimpulan Ilmiah:</em> Pembatasan domain menjadi $x \ge 0$ menjamin bahwa kurva hanya mengambil separuh parabola di kuadran pertama, sehingga sifat injektif terpenuhi dan fungsi inversnya sah sebagai fungsi akar kuadrat $\sqrt{x}$.
+            </p>
+          </div>
+
+          <!-- Interactive Tool: Inverse Verifier -->
+          <div class="interactive-tool-card">
+            <div class="tool-header">
+              <div class="tool-title-group">
+                <span class="tool-badge">VERIFIKASI INTERAKTIF</span>
+                <h4 class="tool-title">Uji Identitas Pembalikan Invers: $f(x) = 3x - 6$</h4>
+              </div>
+              <span class="tool-hint">Buktikan sifat $(f^{-1} \circ f)(x) = x$</span>
+            </div>
+            <div class="tool-body">
+              <div class="tool-controls">
+                <label for="invInputX" class="tool-label">Masukkan Masukan Asal ($x$):</label>
+                <div class="input-action-row">
+                  <input type="number" id="invInputX" class="form-input" value="4" step="any" aria-label="Nilai x untuk uji invers">
+                  <button id="btnRunInverseTest" class="btn btn-secondary">Jalankan Siklus Pembalikan</button>
+                </div>
+              </div>
+
+              <div class="inverse-cycle-display" id="inverseCycleDisplay">
+                <div class="cycle-box">
+                  <span class="cy-lbl">1. Masukan Awal ($x$)</span>
+                  <span class="cy-val" id="cyInitial">4</span>
+                </div>
+                <div class="cycle-arrow">&rarr; $f(x) = 3(4) - 6$ &rarr;</div>
+                <div class="cycle-box">
+                  <span class="cy-lbl">2. Nilai Hasil ($y$)</span>
+                  <span class="cy-val" id="cyTransformed">6</span>
+                </div>
+                <div class="cycle-arrow">&rarr; $f^{-1}(y) = \frac{6+6}{3}$ &rarr;</div>
+                <div class="cycle-box highlight-success">
+                  <span class="cy-lbl">3. Hasil Pembalikan ($x$)</span>
+                  <span class="cy-val" id="cyRestored">4</span>
+                </div>
+              </div>
+
+              <div class="cycle-summary" id="cySummaryText">
+                Sukses: Masukan asal $x = 4$ menghasilkan keluaran $6$, dan ketika dimasukkan ke dalam rumus invers $f^{-1}(6)$, nilainya kembali sempurna menjadi $4$.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== LABORATORIUM PRAKTIK PERHITUNGAN ==================== -->
+    <section class="section-container chapter-section" id="praktik-hitung">
+      <div class="container">
+        <div class="chapter-meta">
+          <span class="chapter-badge">INTERACTIVE WORKBENCH</span>
+          <span class="chapter-number-display">LAB PRAKTIK</span>
+        </div>
+        <h2 class="chapter-heading">Laboratorium Praktik : Eksplorasi &amp; Latihan Berhitung Mandiri</h2>
+        <div class="chapter-rule"></div>
+
+        <div class="article-body">
+          <p class="paragraph-lead">
+            Gunakan laboratorium interaktif ini untuk mempraktikkan langsung langkah-langkah aljabar, memanipulasi koefisien fungsi, menguji nilai masukan sembarang, serta menguji ketangkasan berhitung Anda melalui tantangan interaktif bertahap.
+          </p>
+
+          <!-- Module Navigation Tabs -->
+          <div class="lab-nav-tabs" role="tablist" aria-label="Tab Laboratorium Praktik">
+            <button type="button" class="lab-tab-btn active" role="tab" id="tabBtnComp" aria-selected="true" aria-controls="panelLabComp">
+              <span class="tab-badge">01</span> Praktik Komposisi Fungsi
+            </button>
+            <button type="button" class="lab-tab-btn" role="tab" id="tabBtnInv" aria-selected="false" aria-controls="panelLabInv">
+              <span class="tab-badge">02</span> Praktik Fungsi Invers
+            </button>
+            <button type="button" class="lab-tab-btn" role="tab" id="tabBtnChallenge" aria-selected="false" aria-controls="panelLabChallenge">
+              <span class="tab-badge">03</span> Tantangan Latihan Berhitung
+            </button>
+          </div>
+
+          <!-- ================= TAB PANEL 1: KOMPOSISI ================= -->
+          <div class="lab-tab-panel active" id="panelLabComp" role="tabpanel" aria-labelledby="tabBtnComp">
+            <div class="lab-panel-card">
+              <div class="lab-panel-header">
+                <h3 class="lab-panel-title">Modul Praktik 1: Eksplorasi Komposisi $(f \circ g)(x)$ dan $(g \circ f)(x)$</h3>
+                <p class="lab-panel-subtitle">Tentukan sendiri fungsi aljabar atau pilih preset untuk membedah langkah aljabar dan membuktikan sifat non-komutatif secara langsung.</p>
+              </div>
+
+              <!-- Preset Quick Selection -->
+              <div class="lab-presets-row">
+                <span class="presets-label">Pilihan Preset Cepat:</span>
+                <div class="preset-btn-group">
+                  <button type="button" class="btn-preset active" data-comp-preset="compPreset1">Preset 1: Linear &amp; Kuadrat</button>
+                  <button type="button" class="btn-preset" data-comp-preset="compPreset2">Preset 2: Linear &amp; Linear</button>
+                  <button type="button" class="btn-preset" data-comp-preset="compPreset3">Preset 3: Kuadrat Murni</button>
+                </div>
+              </div>
+
+              <!-- Function Setup Form -->
+              <div class="lab-config-grid">
+                <!-- Function f(x) -->
+                <div class="fn-config-box">
+                  <h4 class="fn-box-title">Konfigurasi Fungsi $f(x)$</h4>
+                  <div class="fn-formula-preview" id="previewFormulaF">$$f(x) = 2x + 3$$</div>
+                  <div class="fn-input-row">
+                    <div class="input-field-group">
+                      <label for="compCoeffA" class="input-lbl">Koefisien $a$ ($x$):</label>
+                      <input type="number" id="compCoeffA" class="form-input form-input-sm" value="2" step="any">
+                    </div>
+                    <div class="input-field-group">
+                      <label for="compConstB" class="input-lbl">Konstanta $b$:</label>
+                      <input type="number" id="compConstB" class="form-input form-input-sm" value="3" step="any">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Function g(x) -->
+                <div class="fn-config-box">
+                  <h4 class="fn-box-title">Konfigurasi Fungsi $g(x)$</h4>
+                  <div class="fn-formula-preview" id="previewFormulaG">$$g(x) = x^2 - 1$$</div>
+                  <div class="fn-input-row">
+                    <div class="input-field-group">
+                      <label for="compTypeG" class="input-lbl">Bentuk $g(x)$:</label>
+                      <select id="compTypeG" class="form-input form-input-sm form-select">
+                        <option value="quad" selected>Kuadrat: c x² + d</option>
+                        <option value="lin">Linear: c x + d</option>
+                      </select>
+                    </div>
+                    <div class="input-field-group">
+                      <label for="compCoeffC" class="input-lbl">Koefisien $c$:</label>
+                      <input type="number" id="compCoeffC" class="form-input form-input-sm" value="1" step="any">
+                    </div>
+                    <div class="input-field-group">
+                      <label for="compConstD" class="input-lbl">Konstanta $d$:</label>
+                      <input type="number" id="compConstD" class="form-input form-input-sm" value="-1" step="any">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Input X and Trigger Button -->
+              <div class="lab-action-bar">
+                <div class="action-input-wrap">
+                  <label for="labCompInputX" class="action-lbl">Nilai Masukan Domain ($x$):</label>
+                  <input type="number" id="labCompInputX" class="form-input" value="3" step="any" style="max-width: 140px;">
+                </div>
+                <button type="button" id="btnCalculateCompLab" class="btn btn-primary">
+                  Hitung &amp; Bedah Alur Komposisi
+                </button>
+              </div>
+
+              <!-- Results Area -->
+              <div class="lab-results-container" id="labCompResults">
+                <!-- Dynamically populated by JavaScript -->
+              </div>
+            </div>
+          </div>
+
+          <!-- ================= TAB PANEL 2: INVERS ================= -->
+          <div class="lab-tab-panel" id="panelLabInv" role="tabpanel" aria-labelledby="tabBtnInv">
+            <div class="lab-panel-card">
+              <div class="lab-panel-header">
+                <h3 class="lab-panel-title">Modul Praktik 2: Penurunan 5 Langkah Aljabar Fungsi Invers $f^{-1}(x)$</h3>
+                <p class="lab-panel-subtitle">Pilih jenis fungsi, tentukan koefisien aljabar, lalu amati penurunan langkah demi langkah serta uji pembuktian identitasnya.</p>
+              </div>
+
+              <!-- Preset Quick Selection -->
+              <div class="lab-presets-row">
+                <span class="presets-label">Pilihan Preset Cepat:</span>
+                <div class="preset-btn-group">
+                  <button type="button" class="btn-preset active" data-inv-preset="invLinear1">Linear: 3x - 6</button>
+                  <button type="button" class="btn-preset" data-inv-preset="invLinear2">Linear: 5x + 10</button>
+                  <button type="button" class="btn-preset" data-inv-preset="invFrac">Pecahan: (2x-1)/(x+3)</button>
+                  <button type="button" class="btn-preset" data-inv-preset="invQuad">Kuadrat: x² (x ≥ 0)</button>
+                </div>
+              </div>
+
+              <!-- Inversion Function Config -->
+              <div class="lab-config-grid">
+                <div class="fn-config-box">
+                  <h4 class="fn-box-title">Pilih Bentuk Fungsi $f(x)$</h4>
+                  <div class="input-field-group" style="margin-bottom: 12px;">
+                    <label for="invTypeSelect" class="input-lbl">Tipe Fungsi:</label>
+                    <select id="invTypeSelect" class="form-input form-input-sm form-select">
+                      <option value="linear" selected>Fungsi Linear: ax + b</option>
+                      <option value="fraction">Fungsi Pecahan: (ax + b) / (cx + d)</option>
+                      <option value="quad">Fungsi Kuadrat: ax² + b (domain x ≥ 0)</option>
+                    </select>
+                  </div>
+                  <div class="fn-formula-preview" id="previewFormulaInv">$$f(x) = 3x - 6$$</div>
+                </div>
+
+                <div class="fn-config-box">
+                  <h4 class="fn-box-title">Parameter Koefisien</h4>
+                  <div class="fn-input-row">
+                    <div class="input-field-group">
+                      <label for="invCoeffA" class="input-lbl">Parameter $a$:</label>
+                      <input type="number" id="invCoeffA" class="form-input form-input-sm" value="3" step="any">
+                    </div>
+                    <div class="input-field-group">
+                      <label for="invConstB" class="input-lbl">Parameter $b$:</label>
+                      <input type="number" id="invConstB" class="form-input form-input-sm" value="-6" step="any">
+                    </div>
+                    <div class="input-field-group" id="wrapInvC" style="display: none;">
+                      <label for="invCoeffC" class="input-lbl">Parameter $c$ (penyebut):</label>
+                      <input type="number" id="invCoeffC" class="form-input form-input-sm" value="1" step="any">
+                    </div>
+                    <div class="input-field-group" id="wrapInvD" style="display: none;">
+                      <label for="invConstD" class="input-lbl">Parameter $d$ (penyebut):</label>
+                      <input type="number" id="invConstD" class="form-input form-input-sm" value="3" step="any">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Input X and Trigger Button -->
+              <div class="lab-action-bar">
+                <div class="action-input-wrap">
+                  <label for="labInvInputX" class="action-lbl">Nilai Uji Masukan ($x$):</label>
+                  <input type="number" id="labInvInputX" class="form-input" value="4" step="any" style="max-width: 140px;">
+                </div>
+                <button type="button" id="btnCalculateInvLab" class="btn btn-primary">
+                  Turunkan Invers &amp; Uji Siklus
+                </button>
+              </div>
+
+              <!-- Results Area -->
+              <div class="lab-results-container" id="labInvResults">
+                <!-- Dynamically populated by JavaScript -->
+              </div>
+            </div>
+          </div>
+
+          <!-- ================= TAB PANEL 3: TANTANGAN LATIHAN BERHITUNG ================= -->
+          <div class="lab-tab-panel" id="panelLabChallenge" role="tabpanel" aria-labelledby="tabBtnChallenge">
+            <div class="lab-panel-card">
+              <div class="lab-panel-header">
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+                  <div>
+                    <h3 class="lab-panel-title">Modul Praktik 3: Tantangan Latihan Berhitung Mandiri</h3>
+                    <p class="lab-panel-subtitle">Kerjakan soal perhitungan bertahap berikut. Masukkan langkah antara dan hasil akhir Anda untuk verifikasi instan.</p>
+                  </div>
+                  <div style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-sage); font-weight: 600;">
+                    Terselesaikan: <span id="challengeSolvedCount">0</span> Soal
+                  </div>
+                </div>
+              </div>
+
+              <div class="challenge-card">
+                <div class="challenge-header">
+                  <span class="problem-badge" id="challengeTopicBadge">KOMPOSISI FUNGSI</span>
+                  <span class="problem-difficulty" id="challengeDifficulty">Tingkat Mandiri</span>
+                </div>
+
+                <div class="challenge-prompt-box" id="challengePromptText">
+                  <!-- Prompt will be populated by JS -->
+                </div>
+
+                <div class="challenge-inputs-row">
+                  <div class="input-field-group">
+                    <label for="inputChallengeStep1" class="action-lbl" id="lblChallengeStep1">Langkah 1: Masukkan nilai antara:</label>
+                    <input type="number" id="inputChallengeStep1" class="form-input" placeholder="Ketik hasil perhitungan langkah 1" step="any">
+                  </div>
+                  <div class="input-field-group">
+                    <label for="inputChallengeStep2" class="action-lbl" id="lblChallengeStep2">Langkah 2: Masukkan hasil akhir:</label>
+                    <input type="number" id="inputChallengeStep2" class="form-input" placeholder="Ketik hasil akhir" step="any">
+                  </div>
+                </div>
+
+                <div class="challenge-actions">
+                  <button type="button" id="btnVerifyChallenge" class="btn btn-primary">
+                    Periksa Perhitungan Saya
+                  </button>
+                  <button type="button" id="btnShowChallengeHint" class="btn btn-secondary">
+                    Beri Petunjuk
+                  </button>
+                  <button type="button" id="btnNewChallenge" class="btn btn-secondary">
+                    Buat Soal Baru
+                  </button>
+                </div>
+
+                <!-- Feedback Area -->
+                <div id="challengeFeedbackBox" class="challenge-feedback-box" style="display: none;"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BAB 04 : PENERAPAN KEHIDUPAN SEHARI-HARI ==================== -->
+    <section class="section-container chapter-section alt-bg" id="penerapan">
+      <div class="container">
+        <div class="chapter-meta">
+          <span class="chapter-badge">MATHEMATICS / CHAPTER 04</span>
+          <span class="chapter-number-display">BAB 04</span>
+        </div>
+        <h2 class="chapter-heading">Penerapan dalam Kehidupan Sehari-hari</h2>
+        <div class="chapter-rule"></div>
+
+        <div class="article-body">
+          <p class="paragraph-lead">
+            Matematika bukanlah sekadar deretan simbol abstrak di atas kertas putih. Konsep fungsi komposisi dan fungsi invers merupakan alat pemodelan yang sangat berdaya guna dalam memecahkan masalah kontekstual di dunia nyata.
+          </p>
+
+          <h3 class="sub-heading sub-with-tag">
+            <span class="sub-tag">BAGIAN A</span>
+            Aplikasi Nyata Fungsi Komposisi
+          </h3>
+
+          <div class="applications-container">
+            <!-- App 1: Konversi Suhu -->
+            <div class="app-card">
+              <div class="app-card-head">
+                <span class="app-num">K-01</span>
+                <h4 class="app-title">Konversi Suhu Bertingkat (Celsius ke Fahrenheit ke Rankine)</h4>
+              </div>
+              <div class="app-card-body">
+                <p class="app-scenario">
+                  <strong>Situasi Kontekstual:</strong> Dalam termodinamika penerbangan, seorang insinyur menerima data suhu atmosfer dalam derajat Celsius ($C$), namun instrumen avionik memerlukan data dalam skala Rankine ($R$).
+                </p>
+                <div class="app-math-block">
+                  <p>Fungsi pertama (Celsius ke Fahrenheit):</p>
+                  <div class="formula-inline-box">$$F(C) = \frac{9}{5}C + 32$$</div>
+                  <p>Fungsi kedua (Fahrenheit ke Rankine):</p>
+                  <div class="formula-inline-box">$$R(F) = F + 459.67$$</div>
+                  <p>Komposisi fungsi langsung $(R \circ F)(C)$:</p>
+                  <div class="formula-center">
+                    $$(R \circ F)(C) = R(F(C)) = \left(\frac{9}{5}C + 32\right) + 459.67 = \frac{9}{5}C + 491.67$$
+                  </div>
+                </div>
+                <p class="app-impact">
+                  <strong>Manfaat Nyata:</strong> Insinyur tidak perlu melakukan dua kali perhitungan terpisah. Fungsi komposisi $(R \circ F)(C)$ memadatkan dua formula menjadi satu formula konversi langsung yang menghemat waktu komputasi.
+                </p>
+              </div>
+            </div>
+
+            <!-- App 2: Diskon Bertingkat & Pajak -->
+            <div class="app-card">
+              <div class="app-card-head">
+                <span class="app-num">K-02</span>
+                <h4 class="app-title">Perhitungan Harga Belanja: Diskon Bertingkat dan Pajak PPN</h4>
+              </div>
+              <div class="app-card-body">
+                <p class="app-scenario">
+                  <strong>Situasi Kontekstual:</strong> Sebuah pusat perbelanjaan memberikan diskon promo sebesar $20\%$ untuk semua barang, lalu transaksi tersebut dikenakan Pajak Pertambahan Nilai (PPN) sebesar $11\%$ dari harga setelah diskon.
+                </p>
+                <div class="app-math-block">
+                  <p>Misalkan harga label awal adalah $x$ rupiah. Fungsi potongan diskon $20\%$:</p>
+                  <div class="formula-inline-box">$$d(x) = (1 - 0.20)x = 0.8x$$</div>
+                  <p>Fungsi penambahan pajak $11\%$ atas harga setelah diskon $y$:</p>
+                  <div class="formula-inline-box">$$t(y) = (1 + 0.11)y = 1.11y$$</div>
+                  <p>Fungsi komposisi total harga yang harus dibayar $(t \circ d)(x)$:</p>
+                  <div class="formula-center">
+                    $$(t \circ d)(x) = t(d(x)) = 1.11(0.8x) = 0.888x$$
+                  </div>
+                </div>
+                <p class="app-impact">
+                  <strong>Manfaat Nyata:</strong> Kasir atau sistem POS (Point of Sale) cukup mengalikan harga label awal dengan faktor pengali tunggal $0.888$, tanpa perlu menghitung diskon dan pajak secara bertahap.
+                </p>
+              </div>
+            </div>
+
+            <!-- App 3: Pengolahan Citra Digital -->
+            <div class="app-card">
+              <div class="app-card-head">
+                <span class="app-num">K-03</span>
+                <h4 class="app-title">Pemrosesan Citra Digital dan Transformasi Data Sinyal</h4>
+              </div>
+              <div class="app-card-body">
+                <p class="app-scenario">
+                  <strong>Situasi Kontekstual:</strong> Dalam aplikasi fotografi pada ponsel cerdas, sensor kamera menangkap intensitas piksel dalam bilangan bulat $0$ hingga $255$. Sebelum ditampilkan ke layar, sinyal harus dinormalisasi dan diatur kontrasnya (gamma correction).
+                </p>
+                <div class="app-math-block">
+                  <p>Fungsi 1 (Normalisasi nilai piksel ke interval $[0, 1]$):</p>
+                  <div class="formula-inline-box">$$g(p) = \frac{p}{255}$$</div>
+                  <p>Fungsi 2 (Koreksi Gamma non-linear dengan parameter $\gamma$):</p>
+                  <div class="formula-inline-box">$$f(u) = u^\gamma$$</div>
+                  <p>Fungsi komposisi pemrosesan piksel $(f \circ g)(p)$:</p>
+                  <div class="formula-center">
+                    $$(f \circ g)(p) = f(g(p)) = \left(\frac{p}{255}\right)^\gamma$$
+                  </div>
+                </div>
+                <p class="app-impact">
+                  <strong>Manfaat Nyata:</strong> Jutaan piksel pada layar dapat ditransformasi secara paralel menggunakan fungsi komposisi langsung dalam chip kartu grafis (GPU).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="sub-heading sub-with-tag" style="margin-top: 48px;">
+            <span class="sub-tag">BAGIAN B</span>
+            Aplikasi Nyata Fungsi Invers
+          </h3>
+
+          <div class="applications-container">
+            <!-- Invers App 1 -->
+            <div class="app-card">
+              <div class="app-card-head">
+                <span class="app-num">I-01</span>
+                <h4 class="app-title">Mengembalikan Skala Pengukuran Suhu (Fahrenheit ke Celsius)</h4>
+              </div>
+              <div class="app-card-body">
+                <p class="app-scenario">
+                  <strong>Situasi Kontekstual:</strong> Seorang turis Indonesia berkunjung ke Amerika Serikat dan melihat termometer menunjukkan angka $77^\circ\text{F}$. Ia ingin mengetahui berapa suhu tersebut dalam skala Celsius yang biasa ia gunakan.
+                </p>
+                <div class="app-math-block">
+                  <p>Fungsi maju Celsius ke Fahrenheit:</p>
+                  <div class="formula-inline-box">$$F = \frac{9}{5}C + 32$$</div>
+                  <p>Mencari rumus invers $C = F^{-1}(F)$:</p>
+                  <div class="formula-center">
+                    $$F - 32 = \frac{9}{5}C \implies C = \frac{5}{9}(F - 32)$$
+                  </div>
+                  <p>Evaluasi untuk $F = 77$:</p>
+                  <div class="formula-center">
+                    $$C = \frac{5}{9}(77 - 32) = \frac{5}{9}(45) = 25^\circ\text{C}$$
+                  </div>
+                </div>
+                <p class="app-impact">
+                  <strong>Manfaat Nyata:</strong> Invers memungkinkan pembacaan dua arah yang konsisten tanpa kehilangan akurasi skala fisik.
+                </p>
+              </div>
+            </div>
+
+            <!-- Invers App 2 -->
+            <div class="app-card">
+              <div class="app-card-head">
+                <span class="app-num">I-02</span>
+                <h4 class="app-title">Rekonstruksi Harga Asli Sebelum Diskon dari Struk Belanja</h4>
+              </div>
+              <div class="app-card-body">
+                <p class="app-scenario">
+                  <strong>Situasi Kontekstual:</strong> Seseorang membeli sepasang sepatu dengan diskon $30\%$. Di struk pembayaran kasir tertera nominal akhir yang dibayarkan adalah Rp350.000. Ia ingin mengetahui berapa harga asli sepatu tersebut sebelum dikenai diskon.
+                </p>
+                <div class="app-math-block">
+                  <p>Fungsi diskon dengan harga awal $x$:</p>
+                  <div class="formula-inline-box">$$y = f(x) = (1 - 0.30)x = 0.70x$$</div>
+                  <p>Mencari fungsi invers $x = f^{-1}(y)$:</p>
+                  <div class="formula-center">
+                    $$x = \frac{y}{0.70} = \frac{10}{7}y$$
+                  </div>
+                  <p>Substitusikan nilai nominal struk $y = 350.000$:</p>
+                  <div class="formula-center">
+                    $$x = \frac{350.000}{0.70} = 500.000$$
+                  </div>
+                </div>
+                <p class="app-impact">
+                  <strong>Manfaat Nyata:</strong> Bagian audit keuangan dan konsumen dapat memverifikasi kebenaran potongan harga dari data akhir secara presisi.
+                </p>
+              </div>
+            </div>
+
+            <!-- Invers App 3 -->
+            <div class="app-card">
+              <div class="app-card-head">
+                <span class="app-num">I-03</span>
+                <h4 class="app-title">Dekripsi dan Pembalikan Transformasi Kriptografi</h4>
+              </div>
+              <div class="app-card-body">
+                <p class="app-scenario">
+                  <strong>Situasi Kontekstual:</strong> Dalam pengiriman pesan rahasia secara digital, teks asli dienkripsi menggunakan fungsi kunci $y = f(x) = ax + b \pmod m$. Penerima pesan yang memegang kunci yang sama memerlukan fungsi invers $f^{-1}(y)$ untuk mendekripsi pesan tersebut kembali ke teks aslinya.
+                </p>
+                <div class="app-math-block">
+                  <p>Hubungan matematis proses enkripsi dan dekripsi:</p>
+                  <div class="formula-center">
+                    $$\text{Teks Asli } (x) \xrightarrow{\text{Enkripsi } f} \text{Teks Sandi } (y) \xrightarrow{\text{Dekripsi } f^{-1}} \text{Teks Asli } (x)$$
+                  </div>
+                </div>
+                <p class="app-impact">
+                  <strong>Manfaat Nyata:</strong> Tanpa sifat fungsi bijektif dan formula invers yang presisi, pesan yang telah disandikan tidak akan pernah bisa didekripsi kembali menjadi informasi aslinya.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="academic-callout caution-box">
+            <div class="callout-header">
+              <span class="callout-tag">PERHATIAN METODOLOGIS</span>
+              <span class="callout-title">Batasan Pembalikan Proses di Dunia Nyata</span>
+            </div>
+            <p class="callout-body">
+              Secara matematis, kita harus berhati-hati untuk tidak mengklaim bahwa seluruh proses alami dapat diinverskan. Banyak fenomena fisik yang bersifat <em>ireversibel</em> (tidak dapat dibalik), seperti pencampuran zat warna atau proses hilangnya energi akibat gesekan (Hukum Kedua Termodinamika). Suatu proses nyata hanya dapat memiliki invers matematis jika tidak ada informasi yang hilang selama proses maju dan hubungan antarvariabelnya terbukti bijektif.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BAB 05 : CONTOH SOAL DAN PEMBAHASAN ==================== -->
+    <section class="section-container chapter-section" id="soal-pembahasan">
+      <div class="container">
+        <div class="chapter-meta">
+          <span class="chapter-badge">MATHEMATICS / CHAPTER 05</span>
+          <span class="chapter-number-display">BAB 05</span>
+        </div>
+        <h2 class="chapter-heading">Problem &amp; Analysis : Contoh Soal dan Pembahasan Lengkap</h2>
+        <div class="chapter-rule"></div>
+
+        <div class="article-body">
+          <p class="paragraph-lead">
+            Berikut disajikan enam variasi problem analitis yang menguji pemahaman konsep fungsi komposisi dan fungsi invers secara menyeluruh. Setiap soal diuraikan berdasarkan informasi yang diketahui, hal yang ditanyakan, rumus dasar, serta langkah derivasi aljabar yang runtut.
+          </p>
+
+          <div class="problems-collection">
+
+            <!-- Problem 01 -->
+            <article class="problem-card">
+              <div class="problem-card-header">
+                <div class="problem-badge">PROBLEM 01</div>
+                <h3 class="problem-title">Komposisi Dua Fungsi Linear Dasar</h3>
+                <span class="problem-difficulty">Tingkat: Dasar</span>
+              </div>
+              <div class="problem-body">
+                <div class="problem-statement">
+                  <p><strong>Soal:</strong> Diketahui fungsi linear $f(x) = x + 4$ dan $g(x) = 2x$. Tentukan rumus fungsi komposisi $(f \circ g)(x)$.</p>
+                </div>
+
+                <div class="solution-block">
+                  <div class="solution-meta-grid">
+                    <div class="sol-item">
+                      <span class="sol-lbl">Diketahui:</span>
+                      <span class="sol-val">$f(x) = x + 4$ dan $g(x) = 2x$</span>
+                    </div>
+                    <div class="sol-item">
+                      <span class="sol-lbl">Ditanyakan:</span>
+                      <span class="sol-val">Rumus $(f \circ g)(x)$</span>
+                    </div>
+                    <div class="sol-item full-width">
+                      <span class="sol-lbl">Landasan Rumus:</span>
+                      <span class="sol-val">$(f \circ g)(x) = f(g(x))$</span>
+                    </div>
+                  </div>
+
+                  <h4 class="steps-title">Langkah Pembahasan:</h4>
+                  <ol class="step-derivation-list">
+                    <li>Tuliskan definisi komposisi:
+                      $$(f \circ g)(x) = f(g(x))$$
+                    </li>
+                    <li>Substitusikan bentuk rumus $g(x) = 2x$ ke dalam argumen fungsi $f$:
+                      $$= f(2x)$$
+                    </li>
+                    <li>Karena rumus fungsi $f(x) = x + 4$, gantikan setiap variabel $x$ dengan $(2x)$:
+                      $$= (2x) + 4 = 2x + 4$$
+                    </li>
+                  </ol>
+
+                  <div class="final-answer-card">
+                    <span class="answer-badge">Jawaban Akhir:</span>
+                    <span class="answer-math">$$(f \circ g)(x) = 2x + 4$$</span>
+                    <button class="btn-copy-eq" data-formula="(f \circ g)(x) = 2x + 4" title="Salin Jawaban">Salin Jawaban</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Problem 02 -->
+            <article class="problem-card">
+              <div class="problem-card-header">
+                <div class="problem-badge">PROBLEM 02</div>
+                <h3 class="problem-title">Komposisi Fungsi dengan Substitusi Polinomial Kuadrat</h3>
+                <span class="problem-difficulty">Tingkat: Menengah</span>
+              </div>
+              <div class="problem-body">
+                <div class="problem-statement">
+                  <p><strong>Soal:</strong> Diketahui $f(x) = x^2 + 1$ dan $g(x) = x - 3$. Tentukan rumus fungsi komposisi $(f \circ g)(x)$.</p>
+                </div>
+
+                <div class="solution-block">
+                  <div class="solution-meta-grid">
+                    <div class="sol-item">
+                      <span class="sol-lbl">Diketahui:</span>
+                      <span class="sol-val">$f(x) = x^2 + 1$ dan $g(x) = x - 3$</span>
+                    </div>
+                    <div class="sol-item">
+                      <span class="sol-lbl">Ditanyakan:</span>
+                      <span class="sol-val">Rumus $(f \circ g)(x)$</span>
+                    </div>
+                    <div class="sol-item full-width">
+                      <span class="sol-lbl">Landasan Rumus:</span>
+                      <span class="sol-val">$(f \circ g)(x) = f(g(x))$ dan ekspansi $(a - b)^2 = a^2 - 2ab + b^2$</span>
+                    </div>
+                  </div>
+
+                  <h4 class="steps-title">Langkah Pembahasan:</h4>
+                  <ol class="step-derivation-list">
+                    <li>Tuliskan definisi komposisi:
+                      $$(f \circ g)(x) = f(g(x))$$
+                    </li>
+                    <li>Substitusikan $g(x) = x - 3$ ke dalam fungsi $f$:
+                      $$= f(x - 3)$$
+                    </li>
+                    <li>Masukkan $(x - 3)$ ke rumus $f(x) = x^2 + 1$:
+                      $$= (x - 3)^2 + 1$$
+                    </li>
+                    <li>Jabarkan pengkuadratan suku binomial $(x - 3)^2$:
+                      $$= (x^2 - 6x + 9) + 1$$
+                    </li>
+                    <li>Jumlahkan suku-suku konstanta sejenis:
+                      $$= x^2 - 6x + 10$$
+                    </li>
+                  </ol>
+
+                  <div class="final-answer-card">
+                    <span class="answer-badge">Jawaban Akhir:</span>
+                    <span class="answer-math">$$(f \circ g)(x) = x^2 - 6x + 10$$</span>
+                    <button class="btn-copy-eq" data-formula="(f \circ g)(x) = x^2 - 6x + 10" title="Salin Jawaban">Salin Jawaban</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Problem 03 -->
+            <article class="problem-card">
+              <div class="problem-card-header">
+                <div class="problem-badge">PROBLEM 03</div>
+                <h3 class="problem-title">Evaluasi Komposisi pada Nilai Numerik Tertentu</h3>
+                <span class="problem-difficulty">Tingkat: Dasar</span>
+              </div>
+              <div class="problem-body">
+                <div class="problem-statement">
+                  <p><strong>Soal:</strong> Diketahui $f(x) = 3x - 2$ dan $g(x) = x^2$. Tentukan nilai numerik dari $(f \circ g)(2)$.</p>
+                </div>
+
+                <div class="solution-block">
+                  <div class="solution-meta-grid">
+                    <div class="sol-item">
+                      <span class="sol-lbl">Diketahui:</span>
+                      <span class="sol-val">$f(x) = 3x - 2, \quad g(x) = x^2, \quad x = 2$</span>
+                    </div>
+                    <div class="sol-item">
+                      <span class="sol-lbl">Ditanyakan:</span>
+                      <span class="sol-val">Nilai $(f \circ g)(2)$</span>
+                    </div>
+                    <div class="sol-item full-width">
+                      <span class="sol-lbl">Landasan Rumus:</span>
+                      <span class="sol-val">$(f \circ g)(a) = f(g(a))$</span>
+                    </div>
+                  </div>
+
+                  <h4 class="steps-title">Langkah Pembahasan:</h4>
+                  <ol class="step-derivation-list">
+                    <li>Hitung terlebih dahulu nilai fungsi dalam $g(2)$:
+                      $$g(2) = (2)^2 = 4$$
+                    </li>
+                    <li>Gunakan hasil $g(2) = 4$ sebagai masukan bagi fungsi luar $f$:
+                      $$(f \circ g)(2) = f(g(2)) = f(4)$$
+                    </li>
+                    <li>Hitung nilai $f(4)$ menggunakan rumus $f(x) = 3x - 2$:
+                      $$f(4) = 3(4) - 2 = 12 - 2 = 10$$
+                    </li>
+                  </ol>
+
+                  <div class="final-answer-card">
+                    <span class="answer-badge">Jawaban Akhir:</span>
+                    <span class="answer-math">$$(f \circ g)(2) = 10$$</span>
+                    <button class="btn-copy-eq" data-formula="(f \circ g)(2) = 10" title="Salin Jawaban">Salin Jawaban</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Problem 04 -->
+            <article class="problem-card">
+              <div class="problem-card-header">
+                <div class="problem-badge">PROBLEM 04</div>
+                <h3 class="problem-title">Menentukan Invers dari Fungsi Linear</h3>
+                <span class="problem-difficulty">Tingkat: Dasar</span>
+              </div>
+              <div class="problem-body">
+                <div class="problem-statement">
+                  <p><strong>Soal:</strong> Diberikan fungsi linear satu-satu $f(x) = 5x + 10$. Tentukan rumus fungsi invers $f^{-1}(x)$.</p>
+                </div>
+
+                <div class="solution-block">
+                  <div class="solution-meta-grid">
+                    <div class="sol-item">
+                      <span class="sol-lbl">Diketahui:</span>
+                      <span class="sol-val">$f(x) = 5x + 10$</span>
+                    </div>
+                    <div class="sol-item">
+                      <span class="sol-lbl">Ditanyakan:</span>
+                      <span class="sol-val">Rumus $f^{-1}(x)$</span>
+                    </div>
+                    <div class="sol-item full-width">
+                      <span class="sol-lbl">Landasan Rumus:</span>
+                      <span class="sol-val">$y = f(x) \iff x = f^{-1}(y)$</span>
+                    </div>
+                  </div>
+
+                  <h4 class="steps-title">Langkah Pembahasan:</h4>
+                  <ol class="step-derivation-list">
+                    <li>Nyatakan persamaan dalam bentuk peubah $y$:
+                      $$y = 5x + 10$$
+                    </li>
+                    <li>Tukarkan variabel $x$ dan $y$:
+                      $$x = 5y + 10$$
+                    </li>
+                    <li>Isolasi peubah $y$ di salah satu ruas:
+                      $$x - 10 = 5y \implies 5y = x - 10 \implies y = \frac{x - 10}{5}$$
+                    </li>
+                    <li>Sederhanakan pecahan aljabar:
+                      $$y = \frac{1}{5}x - 2$$
+                    </li>
+                    <li>Gantikan $y$ dengan lambang $f^{-1}(x)$:
+                      $$f^{-1}(x) = \frac{x - 10}{5}$$
+                    </li>
+                  </ol>
+
+                  <div class="final-answer-card">
+                    <span class="answer-badge">Jawaban Akhir:</span>
+                    <span class="answer-math">$$f^{-1}(x) = \frac{x - 10}{5} = \frac{1}{5}x - 2$$</span>
+                    <button class="btn-copy-eq" data-formula="f^{-1}(x) = \frac{x - 10}{5}" title="Salin Jawaban">Salin Jawaban</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Problem 05 -->
+            <article class="problem-card">
+              <div class="problem-card-header">
+                <div class="problem-badge">PROBLEM 05</div>
+                <h3 class="problem-title">Menentukan Invers Fungsi Pecahan Rasional dan Syarat Domain</h3>
+                <span class="problem-difficulty">Tingkat: Lanjut</span>
+              </div>
+              <div class="problem-body">
+                <div class="problem-statement">
+                  <p><strong>Soal:</strong> Diketahui fungsi pecahan linear $f(x) = \frac{2x - 1}{x + 3}$ dengan syarat $x \ne -3$. Tentukan rumus fungsi invers $f^{-1}(x)$ beserta daerah asalnya.</p>
+                </div>
+
+                <div class="solution-block">
+                  <div class="solution-meta-grid">
+                    <div class="sol-item">
+                      <span class="sol-lbl">Diketahui:</span>
+                      <span class="sol-val">$f(x) = \frac{2x - 1}{x + 3}, \quad D_f = \{x \in \mathbb{R} \mid x \ne -3\}$</span>
+                    </div>
+                    <div class="sol-item">
+                      <span class="sol-lbl">Ditanyakan:</span>
+                      <span class="sol-val">Rumus $f^{-1}(x)$ dan syarat domainnya</span>
+                    </div>
+                    <div class="sol-item full-width">
+                      <span class="sol-lbl">Landasan Rumus:</span>
+                      <span class="sol-val">Fungsi rasional $f(x) = \frac{ax+b}{cx+d} \implies f^{-1}(x) = \frac{-dx+b}{cx-a}$ dengan penyebut $\ne 0$</span>
+                    </div>
+                  </div>
+
+                  <h4 class="steps-title">Langkah Pembahasan:</h4>
+                  <ol class="step-derivation-list">
+                    <li>Tuliskan persamaan dalam variabel $y$:
+                      $$y = \frac{2x - 1}{x + 3}$$
+                    </li>
+                    <li>Tukarkan variabel $x$ dan $y$:
+                      $$x = \frac{2y - 1}{y + 3}$$
+                    </li>
+                    <li>Kalikan silang kedua ruas dengan penyebut $(y + 3)$:
+                      $$x(y + 3) = 2y - 1$$
+                      $$xy + 3x = 2y - 1$$
+                    </li>
+                    <li>Kumpulkan seluruh suku yang memuat peubah $y$ di ruas kiri dan suku lainnya di ruas kanan:
+                      $$xy - 2y = -3x - 1$$
+                    </li>
+                    <li>Faktorkan $y$ di ruas kiri:
+                      $$y(x - 2) = -(3x + 1)$$
+                    </li>
+                    <li>Bagi kedua ruas dengan $(x - 2)$:
+                      $$y = \frac{-3x - 1}{x - 2} \quad \text{atau dikalikan } \frac{-1}{-1} \implies y = \frac{3x + 1}{2 - x}$$
+                    </li>
+                    <li>Tentukan syarat penyebut pecahan agar terdefinisi riil:
+                      $$x - 2 \ne 0 \implies x \ne 2$$
+                    </li>
+                  </ol>
+
+                  <div class="final-answer-card">
+                    <span class="answer-badge">Jawaban Akhir:</span>
+                    <span class="answer-math">$$f^{-1}(x) = \frac{-3x - 1}{x - 2}, \quad x \ne 2$$</span>
+                    <button class="btn-copy-eq" data-formula="f^{-1}(x) = \frac{-3x - 1}{x - 2}, x \ne 2" title="Salin Jawaban">Salin Jawaban</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Problem 06 -->
+            <article class="problem-card">
+              <div class="problem-card-header">
+                <div class="problem-badge">PROBLEM 06</div>
+                <h3 class="problem-title">Aplikasi Kontekstual : Diskon Ganda Toko Buku &amp; Rekonstruksi Harga</h3>
+                <span class="problem-difficulty">Tingkat: Terapan Kontekstual</span>
+              </div>
+              <div class="problem-body">
+                <div class="problem-statement">
+                  <p><strong>Soal Cerita:</strong> Dalam rangka bazar literasi sekolah, Toko Buku Cendekia memberlakukan diskon $15\%$ untuk semua buku ilmiah. Selain itu, bagi siswa yang menunjukkan kartu pelajar diberikan kupon potongan tunai tambahan sebesar Rp10.000 setelah diskon $15\%$ dihitung.</p>
+                  <p>a. Buatlah model fungsi komposisi total harga yang harus dibayar siswa untuk buku dengan harga katalog $x$ rupiah.</p>
+                  <p>b. Jika seorang siswa membayar Rp75.000 di kasir, berapakah harga katalog asli buku tersebut sebelum dikenai kedua potongan?</p>
+                </div>
+
+                <div class="solution-block">
+                  <div class="solution-meta-grid">
+                    <div class="sol-item">
+                      <span class="sol-lbl">Fungsi Diskon 15%:</span>
+                      <span class="sol-val">$f(x) = (1 - 0.15)x = 0.85x$</span>
+                    </div>
+                    <div class="sol-item">
+                      <span class="sol-lbl">Fungsi Kupon Potongan:</span>
+                      <span class="sol-val">$g(u) = u - 10.000$</span>
+                    </div>
+                    <div class="sol-item full-width">
+                      <span class="sol-lbl">Hubungan Urutan:</span>
+                      <span class="sol-val">Diskon 15% dihitung dahulu, lalu dipotong kupon $\implies P(x) = (g \circ f)(x)$</span>
+                    </div>
+                  </div>
+
+                  <h4 class="steps-title">Langkah Pembahasan Bagian (a) : Model Komposisi</h4>
+                  <ol class="step-derivation-list">
+                    <li>Komposisikan kedua fungsi:
+                      $$P(x) = (g \circ f)(x) = g(f(x)) = g(0.85x)$$
+                    </li>
+                    <li>Substitusikan ke dalam rumus $g(u) = u - 10.000$:
+                      $$P(x) = 0.85x - 10.000$$
+                    </li>
+                  </ol>
+
+                  <h4 class="steps-title">Langkah Pembahasan Bagian (b) : Menggunakan Invers untuk Rekonstruksi</h4>
+                  <ol class="step-derivation-list">
+                    <li>Diketahui harga bayar di kasir adalah $P(x) = 75.000$. Masukkan ke dalam persamaan:
+                      $$75.000 = 0.85x - 10.000$$
+                    </li>
+                    <li>Pindahkan konstanta Rp10.000 ke ruas kiri:
+                      $$75.000 + 10.000 = 0.85x \implies 85.000 = 0.85x$$
+                    </li>
+                    <li>Selesaikan untuk harga katalog $x$:
+                      $$x = \frac{85.000}{0.85} = 100.000$$
+                    </li>
+                  </ol>
+
+                  <div class="final-answer-card">
+                    <span class="answer-badge">Jawaban Akhir:</span>
+                    <span class="answer-math">$$\text{Model: } P(x) = 0.85x - 10.000; \quad \text{Harga Asli Katalog: Rp100.000}$$</span>
+                    <button class="btn-copy-eq" data-formula="P(x) = 0.85x - 10.000; x = Rp100.000" title="Salin Jawaban">Salin Jawaban</button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BAB 06 : LATIHAN SOAL INTERAKTIF ==================== -->
+    <section class="section-container chapter-section alt-bg" id="latihan-soal">
+      <div class="container">
+        <div class="chapter-meta">
+          <span class="chapter-badge">MATHEMATICS / CHAPTER 06</span>
+          <span class="chapter-number-display">BAB 06</span>
+        </div>
+        <h2 class="chapter-heading">Latihan Soal Interaktif : Evaluasi Mandiri</h2>
+        <div class="chapter-rule"></div>
+
+        <div class="article-body">
+          <p class="paragraph-lead">
+            Uji pemahaman Anda dengan mengerjakan lima soal pilihan ganda berikut. Pilih salah satu jawaban terbaik pada setiap nomor, lalu klik tombol <strong>Periksa Jawaban</strong> untuk melihat status kebenaran beserta pembahasan detailnya.
+          </p>
+
+          <!-- Quiz Container -->
+          <div class="quiz-wrapper" id="quizWrapper">
+
+            <!-- Question 1 -->
+            <div class="quiz-card" data-qindex="0">
+              <div class="q-header">
+                <span class="q-number">SOAL 01 DARI 05</span>
+                <span class="q-topic">Komposisi Fungsi Aljabar</span>
+              </div>
+              <p class="q-prompt">
+                Diketahui $f(x) = 3x + 1$ dan $g(x) = 2x - 5$. Rumus fungsi komposisi $(f \circ g)(x)$ yang benar adalah&hellip;
+              </p>
+              <div class="q-options-list">
+                <label class="q-option-label">
+                  <input type="radio" name="question-0" value="A" class="q-radio">
+                  <span class="option-indicator">A</span>
+                  <span class="option-text">$6x - 14$</span>
+                </label>
+                <label class="q-option-label">
+                  <input type="radio" name="question-0" value="B" class="q-radio">
+                  <span class="option-indicator">B</span>
+                  <span class="option-text">$6x - 15$</span>
+                </label>
+                <label class="q-option-label">
+                  <input type="radio" name="question-0" value="C" class="q-radio">
+                  <span class="option-indicator">C</span>
+                  <span class="option-text">$6x - 4$</span>
+                </label>
+                <label class="q-option-label">
+                  <input type="radio" name="question-0" value="D" class="q-radio">
+                  <span class="option-indicator">D</span>
+                  <span class="option-text">$6x + 6$</span>
+                </label>
+              </div>
+
+              <div class="q-actions">
+                <button class="btn btn-secondary btn-check-answer" data-target="0">Periksa Jawaban</button>
+              </div>
+
+              <!-- Explanation Area -->
+              <div class="q-feedback-box hidden" id="feedback-0">
+                <div class="feedback-status"></div>
+                <div class="feedback-explanation">
+                  <strong>Pembahasan:</strong><br>
+                  $(f \circ g)(x) = f(g(x)) = f(2x - 5)$.<br>
+                  Substitusikan ke rumus $f(x) = 3x + 1$:<br>
+                  $= 3(2x - 5) + 1 = 6x - 15 + 1 = 6x - 14$.<br>
+                  <em>Jawaban yang benar: A.</em>
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="quiz-card" data-qindex="1">
+              <div class="q-header">
+                <span class="q-number">SOAL 02 DARI 05</span>
+                <span class="q-topic">Komposisi Nilai Numerik</span>
+              </div>
+              <p class="q-prompt">
+                Diberikan $f(x) = x^2 - 4$ dan $g(x) = x + 3$. Nilai dari $(g \circ f)(3)$ adalah&hellip;
+              </p>
+              <div class="q-options-list">
+                <label class="q-option-label">
+                  <input type="radio" name="question-1" value="A" class="q-radio">
+                  <span class="option-indicator">A</span>
+                  <span class="option-text">5</span>
+                </label>
+                <label class="q-option-label">
+                  <input type="radio" name="question-1" value="B" class="q-radio">
+                  <span class="option-indicator">B</span>
+                  <span class="option-text">8</span>
+                </label>
+                <label class="q-option-label">
+                  <input type="radio" name="question-1" value="C" class="q-radio">
+                  <span class="option-indicator">C</span>
+                  <span class="option-text">32</span>
+                </label>
+                <label class="q-option-label">
+                  <input type="radio" name="question-1" value="D" class="q-radio">
+                  <span class="option-indicator">D</span>
+                  <span class="option-text">36</span>
+                </label>
+              </div>
+
+              <div class="q-actions">
+                <button class="btn btn-secondary btn-check-answer" data-target="1">Periksa Jawaban</button>
+              </div>
+
+              <div class="q-feedback-box hidden" id="feedback-1">
+                <div class="feedback-status"></div>
+                <div class="feedback-explanation">
+                  <strong>Pembahasan:</strong><br>
+                  Perhatikan urutan komposisinya: $(g \circ f)(3) = g(f(3))$.<br>
+                  Hitung fungsi bagian dalam terlebih dahulu: $f(3) = 3^2 - 4 = 9 - 4 = 5$.<br>
+                  Lalu masukkan ke fungsi $g$: $g(5) = 5 + 3 = 8$.<br>
+                  <em>Jawaban yang benar: B.</em>
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="quiz-card" data-qindex="2">
+              <div class="q-header">
+                <span class="q-number">SOAL 03 DARI 05</span>
+                <span class="q-topic">Fungsi Invers Linear</span>
+              </div>
+              <p class="q-prompt">
+                Invers dari fungsi linear $f(x) = 4x - 8$ adalah $f^{-1}(x) =\dots$
+              </p>
+              <div class="q-options-list">
+                <label class="q-option-label">
+                  <input type="radio" name="question-2" value="A" class="q-radio">
+                  <span class="option-indicator">A</span>
+                  <span class="option-text">$\frac{x - 8}{4}$</span>
+                </label>
+                <label class="q-option-label">
+                  <input type="radio" name="question-2" value="B" class="q-radio">
+                  <span class="option-indicator">B</span>
+                  <span class="option-text">$\frac{x + 8}{4}$</span>
+                </label>
+                <label class="q-option-label">
+                  <input type="radio" name="question-2" value="C" class="q-radio">
+                  <span class="option-indicator">C</span>
+                  <span class="option-text">$4x + 8$</span>
+                </label>
+                <label class="q-option-label">
+                  <input type="radio" name="question-2" value="D" class="q-radio">
+                  <span class="option-indicator">D</span>
+                  <span class="option-text">$\frac{1}{4x - 8}$</span>
+                </label>
+              </div>
+
+              <div class="q-actions">
+                <button class="btn btn-secondary btn-check-answer" data-target="2">Periksa Jawaban</button>
+              </div>
+
+              <div class="q-feedback-box hidden" id="feedback-2">
+                <div class="feedback-status"></div>
+                <div class="feedback-explanation">
+                  <strong>Pembahasan:</strong><br>
+                  Misalkan $y = 4x - 8$. Tukarkan peubah: $x = 4y - 8$.<br>
+                  Isolasi $y$: $x + 8 = 4y \implies y = \frac{x + 8}{4}$.<br>
+                  Ingat kembali bahwa $f^{-1}(x) \ne \frac{1}{f(x)}$, sehingga opsi D adalah jebakan.<br>
+                  <em>Jawaban yang benar: B.</em>
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="quiz-card" data-qindex="3">
+              <div class="q-header">
+                <span class="q-number">SOAL 04 DARI 05</span>
+                <span class="q-topic">Invers Fungsi Pecahan</span>
+              </div>
+              <p class="q-prompt">
+                Diberikan fungsi pecahan $f(x) = \frac{x + 1}{x - 2}$ dengan $x \ne 2$. Rumus fungsi invers $f^{-1}(x)$ adalah&hellip;
+              </p>
+              <div class="q-options-list">
+                <label class="q-option-label">
+                  <input type="radio" name="question-3" value="A" class="q-radio">
+                  <span class="option-indicator">A</span>
+                  <span class="option-text">$\frac{2x + 1}{x - 1}, \quad x \ne 1$</span>
+                </label>
+                <label class="q-option-label">
+                  <input type="radio" name="question-3" value="B" class="q-radio">
+                  <span class="option-indicator">B</span>
+                  <span class="option-text">$\frac{x - 2}{x + 1}, \quad x \ne -1$</span>
+                </label>
+                <label class="q-option-label">
+                  <input type="radio" name="question-3" value="C" class="q-radio">
+                  <span class="option-indicator">C</span>
+                  <span class="option-text">$\frac{-2x + 1}{x - 1}, \quad x \ne 1$</span>
+                </label>
+                <label class="q-option-label">
+                  <input type="radio" name="question-3" value="D" class="q-radio">
+                  <span class="option-indicator">D</span>
+                  <span class="option-text">$\frac{2x - 1}{x + 1}, \quad x \ne -1$</span>
+                </label>
+              </div>
+
+              <div class="q-actions">
+                <button class="btn btn-secondary btn-check-answer" data-target="3">Periksa Jawaban</button>
+              </div>
+
+              <div class="q-feedback-box hidden" id="feedback-3">
+                <div class="feedback-status"></div>
+                <div class="feedback-explanation">
+                  <strong>Pembahasan:</strong><br>
+                  $y = \frac{x + 1}{x - 2} \implies x = \frac{y + 1}{y - 2}$.<br>
+                  $x(y - 2) = y + 1 \implies xy - 2x = y + 1$.<br>
+                  $xy - y = 2x + 1 \implies y(x - 1) = 2x + 1 \implies y = \frac{2x + 1}{x - 1}$.<br>
+                  Syarat domain: penyebut $x - 1 \ne 0 \implies x \ne 1$.<br>
+                  <em>Jawaban yang benar: A.</em>
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="quiz-card" data-qindex="4">
+              <div class="q-header">
+                <span class="q-number">SOAL 05 DARI 05</span>
+                <span class="q-topic">Menentukan Nilai Masukan Komposisi</span>
+              </div>
+              <p class="q-prompt">
+                Diketahui $f(x) = 2x - 3$ dan $g(x) = x + 4$. Jika $(f \circ g)(a) = 11$, maka nilai dari bilangan $a$ adalah&hellip;
+              </p>
+              <div class="q-options-list">
+                <label class="q-option-label">
+                  <input type="radio" name="question-4" value="A" class="q-radio">
+                  <span class="option-indicator">A</span>
+                  <span class="option-text">2</span>
+                </label>
+                <label class="q-option-label">
+                  <input type="radio" name="question-4" value="B" class="q-radio">
+                  <span class="option-indicator">B</span>
+                  <span class="option-text">3</span>
+                </label>
+                <label class="q-option-label">
+                  <input type="radio" name="question-4" value="C" class="q-radio">
+                  <span class="option-indicator">C</span>
+                  <span class="option-text">5</span>
+                </label>
+                <label class="q-option-label">
+                  <input type="radio" name="question-4" value="D" class="q-radio">
+                  <span class="option-indicator">D</span>
+                  <span class="option-text">7</span>
+                </label>
+              </div>
+
+              <div class="q-actions">
+                <button class="btn btn-secondary btn-check-answer" data-target="4">Periksa Jawaban</button>
+              </div>
+
+              <div class="q-feedback-box hidden" id="feedback-4">
+                <div class="feedback-status"></div>
+                <div class="feedback-explanation">
+                  <strong>Pembahasan:</strong><br>
+                  Tentukan rumus $(f \circ g)(x)$: $(f \circ g)(x) = f(x + 4) = 2(x + 4) - 3 = 2x + 8 - 3 = 2x + 5$.<br>
+                  Karena $(f \circ g)(a) = 11$, maka:<br>
+                  $2a + 5 = 11 \implies 2a = 11 - 5 = 6 \implies a = 3$.<br>
+                  <em>Jawaban yang benar: B.</em>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Overall Quiz Score Card -->
+          <div class="quiz-summary-card" id="quizSummaryCard">
+            <div class="summary-header">
+              <span class="summary-badge">LEMBAR EVALUASI AKHIR</span>
+              <h3 class="summary-title">Rekap Hasil Latihan Soal Mandiri</h3>
+            </div>
+            <div class="summary-body">
+              <div class="score-display-panel">
+                <div class="score-circle">
+                  <span class="score-number" id="finalScoreVal">0</span>
+                  <span class="score-total">/ 5</span>
+                </div>
+                <div class="score-info">
+                  <div class="score-percentage" id="scorePercentVal">0% Tuntas</div>
+                  <p class="score-message" id="scoreFeedbackMsg">
+                    Silakan jawab semua soal di atas dan periksa jawaban Anda untuk melihat rekapitulasi penilaian akhir.
+                  </p>
+                </div>
+              </div>
+              <div class="summary-actions">
+                <button id="btnResetQuiz" class="btn btn-secondary">Ulangi Latihan</button>
+                <a href="#pendahuluan" class="btn btn-primary">Ulas Kembali Materi</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BAB 07 : KESIMPULAN & PENUTUP ==================== -->
+    <section class="section-container chapter-section" id="kesimpulan">
+      <div class="container">
+        <div class="chapter-meta">
+          <span class="chapter-badge">MATHEMATICS / CHAPTER 07</span>
+          <span class="chapter-number-display">BAB 07</span>
+        </div>
+        <h2 class="chapter-heading">Kesimpulan dan Penutup Jurnal</h2>
+        <div class="chapter-rule"></div>
+
+        <div class="article-body">
+          <p class="paragraph-lead">
+            Sebagai penutup edisi pembelajaran ini, kita merangkum pokok-pokok pikiran analitis yang telah dibahas sepanjang jurnal:
+          </p>
+
+          <div class="synthesis-grid">
+            <div class="synthesis-card">
+              <span class="synthesis-num">I</span>
+              <h4 class="synthesis-card-title">Fungsi Komposisi Merangkai Proses</h4>
+              <p class="synthesis-card-desc">
+                Fungsi komposisi $(f \circ g)(x) = f(g(x))$ bertindak sebagai pemodelan sekuensial ketika luaran fungsi pertama menjadi bahan masukan fungsi berikutnya. Urutan operasi sangat krusial karena sifatnya yang umumnya tidak komutatif: $(f \circ g)(x) \ne (g \circ f)(x)$.
+              </p>
+            </div>
+
+            <div class="synthesis-card">
+              <span class="synthesis-num">II</span>
+              <h4 class="synthesis-card-title">Fungsi Invers Membalik Hubungan</h4>
+              <p class="synthesis-card-desc">
+                Fungsi invers $f^{-1}(x)$ membalikkan arah relasi sehingga $(f^{-1} \circ f)(x) = x$. Syarat mutlak keberadaan fungsi invers adalah sifat bijektif (satu-satu dan pada). Fungsi kuadrat atau polinomial berderajat genap memerlukan pembatasan domain agar inversnya dapat terdefinisi secara sah.
+              </p>
+            </div>
+
+            <div class="synthesis-card">
+              <span class="synthesis-num">III</span>
+              <h4 class="synthesis-card-title">Fondasi Aplikasi Dunia Nyata</h4>
+              <p class="synthesis-card-desc">
+                Kedua konsep ini menjadi pilar utama dalam pemodelan kalkulasi suhu, algoritma harga bertingkat, kompresi dan dekripsi data, hingga grafika komputer berdimensi tinggi.
+              </p>
+            </div>
+          </div>
+
+          <!-- Scholarly Closing Quote Block -->
+          <div class="academic-epilogue-quote">
+            <blockquote class="epilogue-quote-text">
+              &ldquo;Matematika bukan hanya tentang menghitung, tetapi juga tentang memahami hubungan, pola, dan proses yang terjadi di sekitar kita.&rdquo;
+            </blockquote>
+            <div class="quote-author-line">
+              <span class="line-decor"></span>
+              <span class="author-label">REFLEKSI FILOSOFIS PENDIDIKAN MATEMATIKA</span>
+              <span class="line-decor"></span>
+            </div>
+          </div>
+
+          <!-- Academic Colophon & End Label -->
+          <div class="journal-colophon">
+            <div class="colophon-badge">END OF JOURNAL : MATHEMATICS EDITION 01</div>
+            <p class="colophon-meta">
+              Disusun secara sistematis untuk memenuhi Penugasan Remedial Matematika Sekolah Menengah Atas.<br>
+              Materi Kurikulum Merdeka Fase F : Fungsi Komposisi &amp; Fungsi Invers Aljabar.
+            </p>
+            <div class="colophon-geom-divider" aria-hidden="true">
+              <span>&diams;</span>
+              <span class="geom-line"></span>
+              <span>&lowast;</span>
+              <span class="geom-line"></span>
+              <span>&diams;</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="footer-logo">MATH JOURNAL</span>
+          <p class="footer-tagline">Jurnal Pembelajaran Matematika Modern : Edisi Eksplorasi Fungsi Komposisi &amp; Invers</p>
+        </div>
+        <div class="footer-nav">
+          <a href="#beranda" class="footer-link">Beranda</a>
+          <a href="#pendahuluan" class="footer-link">Pendahuluan</a>
+          <a href="#komposisi" class="footer-link">Fungsi Komposisi</a>
+          <a href="#invers" class="footer-link">Fungsi Invers</a>
+          <a href="#penerapan" class="footer-link">Penerapan</a>
+          <a href="#soal-pembahasan" class="footer-link">Contoh Soal</a>
+          <a href="#latihan-soal" class="footer-link">Latihan Soal</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Mathematical Journal. Hak cipta materi pembelajaran dilindungi untuk kepentingan edukasi sekolah.</p>
+        <p class="footer-academic-note">Tugas Remedial Matematika : Mengedepankan Pemahaman Konseptual, Integritas Akademik, dan Keindahan Desain.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button id="btnBackToTop" class="btn-back-to-top" title="Kembali ke atas halaman" aria-label="Kembali ke atas halaman">
+    <span aria-hidden="true">&uarr;</span>
+  </button>
+
+  <!-- Toast Notification Container for Copied Equation -->
+  <div id="toastContainer" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
