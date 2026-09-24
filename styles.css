@@ -161,6 +161,13 @@ body {
   width: 100%;
 }
 
+/* Scroll Lock When Mobile Menu is Active */
+body.menu-open {
+  overflow: hidden !important;
+  touch-action: none;
+}
+
+
 /* ==========================================================================
    PENTAGON GEOMETRY & COSMIC GALAXY BACKGROUND SYSTEM
    Aesthetics: Regular Pentagons (Segi 5), Golden Pentagram Stars, Celestial Orbit Rings,
@@ -504,6 +511,18 @@ a:hover {
   background-color: var(--color-primary);
   border-radius: 2px;
   transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+.menu-toggle-btn[aria-expanded="true"] .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle-btn[aria-expanded="true"] .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle-btn[aria-expanded="true"] .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 /* --- Native Buttons with Tactile Hardware Feel --- */
@@ -2907,57 +2926,124 @@ a:hover {
 }
 
 @media (max-width: 768px) {
+  .journal-running-head {
+    display: none;
+  }
+
   .menu-toggle-btn {
     display: flex;
   }
 
-  /* Native Mobile Frosted Sheet Drawer */
+  /* Native Mobile Sheet Drawer with 100% Solid Opaque Background */
   .nav-menu {
     position: fixed;
     top: 64px;
     left: 0;
+    right: 0;
     width: 100%;
     height: calc(100vh - 64px);
-    background-color: var(--bg-glass-heavy);
-    backdrop-filter: blur(28px) saturate(190%);
-    -webkit-backdrop-filter: blur(28px) saturate(190%);
-    border-bottom: 1px solid var(--border-medium);
+    height: calc(100dvh - 64px);
+    /* 100% Solid Opaque Background - completely prevents underlying text bleed-through */
+    background-color: #FAF8F5 !important;
+    background: #FAF8F5 !important;
+    border-top: 1px solid var(--border-medium);
+    border-bottom: 2px solid var(--border-medium);
     flex-direction: column;
     align-items: stretch;
-    padding: var(--space-lg);
-    gap: var(--space-xs);
-    box-shadow: var(--shadow-xl);
+    justify-content: flex-start;
+    padding: var(--space-md) var(--space-md) calc(var(--space-2xl) + 20px);
+    gap: 8px;
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.25);
     opacity: 0;
+    visibility: hidden;
     pointer-events: none;
     transform: translateY(-8px);
-    transition: all var(--transition-spring);
+    transition: opacity 0.2s ease, transform 0.25s var(--ease-spring), visibility 0.2s;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    z-index: 999999 !important;
+  }
+
+  /* 100% Solid Opaque Dark Mode Background */
+  [data-theme="dark"] .nav-menu {
+    background-color: #080D14 !important;
+    background: #080D14 !important;
+    border-top: 1px solid rgba(244, 241, 234, 0.12);
+    border-bottom: 2px solid rgba(244, 241, 234, 0.16);
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.7);
   }
 
   .nav-menu.open {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transform: translateY(0) !important;
   }
 
+  .nav-menu li {
+    width: 100%;
+    list-style: none;
+  }
+
+  /* Tactile Solid Cards for Navigation Items on Mobile */
   .nav-link {
-    padding: 14px var(--space-md);
-    border-bottom: 1px solid var(--border-light);
-    font-size: 1.05rem;
-    min-height: 48px;
-    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 14px 18px;
+    background-color: #FFFFFF !important;
+    border: 1px solid rgba(13, 27, 42, 0.12) !important;
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-main) !important;
+    min-height: 52px;
+    box-shadow: 0 1px 3px rgba(13, 27, 42, 0.04);
+    transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .nav-link:hover,
+  .nav-link:focus-visible {
+    background-color: #F4F1EA !important;
+    border-color: var(--accent-gold) !important;
+    color: var(--color-primary) !important;
   }
 
   .nav-link:active {
-    background-color: rgba(0, 0, 0, 0.05);
+    transform: scale(0.98);
   }
 
-  [data-theme="dark"] .nav-link:active {
-    background-color: rgba(255, 255, 255, 0.06);
+  .nav-link.active {
+    background-color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+    color: #FAF8F5 !important;
+    box-shadow: 0 4px 14px rgba(13, 27, 42, 0.18);
   }
 
   .nav-link.active::after {
     display: none;
+  }
+
+  [data-theme="dark"] .nav-link {
+    background-color: #0F1722 !important;
+    border: 1px solid rgba(244, 241, 234, 0.12) !important;
+    color: #E2E8F0 !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  }
+
+  [data-theme="dark"] .nav-link:hover,
+  [data-theme="dark"] .nav-link:focus-visible {
+    background-color: #141F2E !important;
+    border-color: var(--accent-gold) !important;
+    color: #FFFFFF !important;
+  }
+
+  [data-theme="dark"] .nav-link.active {
+    background-color: var(--accent-gold) !important;
+    border-color: var(--accent-gold) !important;
+    color: #080D14 !important;
+    box-shadow: 0 4px 14px rgba(216, 180, 108, 0.25);
   }
 
   .process-flow-diagram {

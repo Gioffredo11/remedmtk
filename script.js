@@ -84,20 +84,49 @@ document.addEventListener('DOMContentLoaded', () => {
   const navMenu = document.getElementById('navMenu');
 
   if (menuToggleBtn && navMenu) {
-    menuToggleBtn.addEventListener('click', () => {
-      const isOpen = navMenu.classList.toggle('open');
-      menuToggleBtn.setAttribute('aria-expanded', isOpen);
+    const setMenuState = (open) => {
+      const isOpen = Boolean(open);
+      navMenu.classList.toggle('open', isOpen);
+      menuToggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      document.body.classList.toggle('menu-open', isOpen);
+    };
+
+    menuToggleBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const nextState = !navMenu.classList.contains('open');
+      setMenuState(nextState);
     });
 
     // Close menu when clicking any nav link
     const navLinks = navMenu.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
-        navMenu.classList.remove('open');
-        menuToggleBtn.setAttribute('aria-expanded', 'false');
+        setMenuState(false);
       });
     });
+
+    // Close menu when clicking outside of navMenu and menuToggleBtn
+    document.addEventListener('click', (e) => {
+      if (navMenu.classList.contains('open') && !navMenu.contains(e.target) && !menuToggleBtn.contains(e.target)) {
+        setMenuState(false);
+      }
+    });
+
+    // Close menu on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navMenu.classList.contains('open')) {
+        setMenuState(false);
+      }
+    });
+
+    // Automatically reset when resized back to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768 && navMenu.classList.contains('open')) {
+        setMenuState(false);
+      }
+    });
   }
+
 
 
   // =========================================================================
