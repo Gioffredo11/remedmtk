@@ -4,8 +4,9 @@
   "description": "Mathematical Journal: Eksplorasi Fungsi Komposisi dan Fungsi Invers",
   "main": "index.html",
   "scripts": {
-    "start": "python -m http.server 8080",
-    "deploy": "npx wrangler pages deploy . --project-name=remed-math-journal --commit-dirty=true"
+    "build": "echo Static build ready",
+    "deploy": "echo Deploying static files",
+    "start": "python -m http.server 8080"
   },
   "keywords": [
     "mathematics",
